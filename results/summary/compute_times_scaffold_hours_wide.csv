@@ -1,0 +1,8 @@
+dataset,Morgan + RF,Morgan + SVM,Morgan + XGBoost,Descriptors + RF,Descriptors + SVM,Descriptors + XGBoost,Combined + XGBoost,GIN (2D),D-MPNN (2D),GIN (3D),SchNet (3D coords),SMILES LSTM
+esol,,,,,,,,0.039,6.079,0.048,0.077,0.053
+freesolv,,,,,,,,0.015,1.789,0.028,0.045,0.033
+lipophilicity,,,,,,,,0.057,34.902,0.07,0.099,0.195
+bace,,,,,,,,,20.548,2.744,10.928,7.798
+bbbp,,,,,,,,,14.138,0.432,4.728,14.655
+tox21,,,,,,,,0.068,30.309,0.08,0.107,0.314
+hiv,1.358,0.47,0.236,0.217,0.03,0.066,0.297,0.188,97.537,0.151,0.262,0.641

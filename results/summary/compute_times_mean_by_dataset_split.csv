@@ -1,0 +1,90 @@
+dataset,split,device,model,n,mean_seconds,std_seconds,mean_hours,mean_human,min_human,max_human,timing_source,n_notebook,n_mtime
+bace,random,gpu,D-MPNN (2D),5,101450.02,20624.14,28.1806,28h 10m 50s,21h 20m 54s,36h 4m 21s,notebook_cell,5,0
+bace,random,gpu,GIN (2D),5,235.83,21.35,0.0655,3m 56s,3m 23s,4m 16s,notebook_cell,5,0
+bace,random,gpu,GIN (3D),5,278.52,34.27,0.0774,4m 39s,4m 2s,5m 24s,notebook_cell,5,0
+bace,random,gpu,SMILES LSTM,5,546.06,74.59,0.1517,9m 6s,7m 19s,10m 28s,notebook_cell,5,0
+bace,random,gpu,SchNet (3D coords),5,361.29,40.59,0.1004,6m 1s,5m 1s,6m 50s,notebook_cell,5,0
+bace,scaffold,gpu,D-MPNN (2D),5,73974.4,16552.9,20.5484,20h 32m 54s,12h 34m 52s,24h 24m 29s,history_mtime_approx,0,5
+bace,scaffold,gpu,GIN (3D),5,9878.4,5358.45,2.744,2h 44m 38s,1h 2m 50s,4h 21m 29s,history_mtime_approx,0,5
+bace,scaffold,gpu,SMILES LSTM,5,28072.0,7200.58,7.7978,7h 47m 52s,5h 34m 16s,10h 9m 25s,history_mtime_approx,0,5
+bace,scaffold,gpu,SchNet (3D coords),5,39339.2,24562.19,10.9276,10h 55m 39s,6h 23m 37s,22h 52m 2s,history_mtime_approx,0,5
+bbbp,random,gpu,D-MPNN (2D),5,78743.94,8130.79,21.8733,21h 52m 24s,19h 39m 28s,25h 8m 15s,notebook_cell,5,0
+bbbp,random,gpu,GIN (2D),5,227.77,35.64,0.0633,3m 48s,3m 5s,4m 36s,notebook_cell,5,0
+bbbp,random,gpu,GIN (3D),5,291.74,72.32,0.081,4m 52s,3m 44s,6m 44s,notebook_cell,5,0
+bbbp,random,gpu,SMILES LSTM,5,1008.44,302.18,0.2801,16m 48s,11m 28s,23m 41s,notebook_cell,5,0
+bbbp,random,gpu,SchNet (3D coords),5,383.22,68.26,0.1065,6m 23s,5m 2s,8m 3s,notebook_cell,5,0
+bbbp,scaffold,gpu,D-MPNN (2D),5,50897.4,4840.84,14.1382,14h 8m 17s,12h 35m 36s,15h 46m 54s,history_mtime_approx,0,5
+bbbp,scaffold,gpu,GIN (3D),5,1554.0,353.43,0.4317,25m 54s,18m 45s,34m 49s,history_mtime_approx,0,5
+bbbp,scaffold,gpu,SMILES LSTM,5,52759.6,16797.75,14.6554,14h 39m 20s,9h 20m 50s,21h 48m 20s,history_mtime_approx,0,5
+bbbp,scaffold,gpu,SchNet (3D coords),5,17022.2,3556.06,4.7284,4h 43m 42s,3h 11m 56s,5h 44m 36s,history_mtime_approx,0,5
+esol,random,gpu,D-MPNN (2D),5,25460.75,5053.68,7.0724,7h 4m 21s,4h 49m 23s,8h 37m 47s,notebook_cell,5,0
+esol,random,gpu,GIN (2D),5,148.0,16.46,0.0411,2m 28s,2m 15s,2m 55s,notebook_cell,5,0
+esol,random,gpu,GIN (3D),5,152.6,33.7,0.0424,2m 33s,1m 54s,3m 9s,notebook_cell,5,0
+esol,random,gpu,SMILES LSTM,5,252.72,33.38,0.0702,4m 13s,3m 34s,4m 50s,notebook_cell,5,0
+esol,random,gpu,SchNet (3D coords),5,252.05,55.77,0.07,4m 12s,2m 48s,5m 15s,notebook_cell,5,0
+esol,scaffold,gpu,D-MPNN (2D),3,21883.99,2917.69,6.0789,6h 4m 44s,5h 22m 39s,6h 57m 58s,notebook_cell,3,2
+esol,scaffold,gpu,GIN (2D),3,141.83,19.3,0.0394,2m 22s,2m 3s,2m 42s,notebook_cell,3,0
+esol,scaffold,gpu,GIN (3D),3,172.74,27.81,0.048,2m 53s,2m 25s,3m 20s,notebook_cell,3,2
+esol,scaffold,gpu,SMILES LSTM,3,190.54,36.7,0.0529,3m 11s,2m 40s,3m 51s,notebook_cell,3,2
+esol,scaffold,gpu,SchNet (3D coords),3,275.8,29.97,0.0766,4m 36s,4m 1s,4m 57s,notebook_cell,3,2
+freesolv,random,gpu,D-MPNN (2D),5,7356.51,705.29,2.0435,2h 2m 37s,1h 44m 19s,2h 16m 42s,notebook_cell,5,0
+freesolv,random,gpu,GIN (2D),5,74.55,5.63,0.0207,1m 15s,1m 7s,1m 21s,notebook_cell,5,0
+freesolv,random,gpu,GIN (3D),5,88.58,18.9,0.0246,1m 29s,1m 9s,1m 58s,notebook_cell,5,0
+freesolv,random,gpu,SMILES LSTM,5,120.51,11.98,0.0335,2m 1s,1m 46s,2m 12s,notebook_cell,5,0
+freesolv,random,gpu,SchNet (3D coords),5,133.62,15.8,0.0371,2m 14s,2m 1s,2m 39s,notebook_cell,5,0
+freesolv,scaffold,gpu,D-MPNN (2D),3,6439.37,179.33,1.7887,1h 47m 19s,1h 44m 52s,1h 50m 39s,notebook_cell,3,2
+freesolv,scaffold,gpu,GIN (2D),3,53.96,4.06,0.015,54.0s,49.6s,57.6s,notebook_cell,3,0
+freesolv,scaffold,gpu,GIN (3D),3,101.33,10.14,0.0281,1m 41s,1m 30s,1m 50s,notebook_cell,3,2
+freesolv,scaffold,gpu,SMILES LSTM,3,119.61,19.98,0.0332,1m 60s,1m 38s,2m 18s,notebook_cell,3,2
+freesolv,scaffold,gpu,SchNet (3D coords),3,163.33,20.34,0.0454,2m 43s,2m 23s,3m 4s,notebook_cell,3,2
+hiv,random,cpu,Combined + XGBoost,2,1119.41,141.32,0.3109,18m 39s,16m 59s,20m 19s,notebook_cell,2,0
+hiv,random,cpu,Descriptors + RF,2,788.28,57.56,0.219,13m 8s,12m 28s,13m 49s,notebook_cell,2,0
+hiv,random,cpu,Descriptors + SVM,2,140.38,25.96,0.039,2m 20s,2m 2s,2m 39s,notebook_cell,2,0
+hiv,random,cpu,Descriptors + XGBoost,2,234.3,4.91,0.0651,3m 54s,3m 51s,3m 58s,notebook_cell,2,0
+hiv,random,cpu,Morgan + RF,2,4509.33,296.38,1.2526,1h 15m 9s,1h 11m 40s,1h 18m 39s,notebook_cell,2,0
+hiv,random,cpu,Morgan + SVM,2,2359.55,886.8,0.6554,39m 20s,28m 52s,49m 47s,notebook_cell,2,0
+hiv,random,cpu,Morgan + XGBoost,2,941.92,90.97,0.2616,15m 42s,14m 38s,16m 46s,notebook_cell,2,0
+hiv,random,gpu,D-MPNN (2D),2,398260.97,5411.13,110.628,110h 37m 41s,109h 33m 55s,111h 41m 27s,notebook_cell,2,0
+hiv,random,gpu,GIN (2D),5,20562.8,27060.11,5.7119,5h 42m 43s,14m 28s,14h 57m 17s,history_mtime_approx,0,5
+hiv,random,gpu,GIN (3D),2,662.37,33.96,0.184,11m 2s,10m 38s,11m 26s,notebook_cell,2,1
+hiv,random,gpu,SMILES LSTM,3,2308.83,446.42,0.6413,38m 29s,30m 11s,44m 35s,notebook_cell,3,0
+hiv,random,gpu,SchNet (3D coords),2,1114.44,13.82,0.3096,18m 34s,18m 25s,18m 44s,notebook_cell,2,1
+hiv,scaffold,cpu,Combined + XGBoost,2,1068.06,72.03,0.2967,17m 48s,16m 57s,18m 39s,notebook_cell,2,0
+hiv,scaffold,cpu,Descriptors + RF,2,782.07,116.11,0.2172,13m 2s,11m 40s,14m 24s,notebook_cell,2,0
+hiv,scaffold,cpu,Descriptors + SVM,2,109.82,4.02,0.0305,1m 50s,1m 47s,1m 53s,notebook_cell,2,0
+hiv,scaffold,cpu,Descriptors + XGBoost,2,237.69,22.9,0.066,3m 58s,3m 42s,4m 14s,notebook_cell,2,0
+hiv,scaffold,cpu,Morgan + RF,2,4889.75,697.94,1.3583,1h 21m 30s,1h 13m 16s,1h 29m 43s,notebook_cell,2,0
+hiv,scaffold,cpu,Morgan + SVM,2,1691.54,970.7,0.4699,28m 12s,16m 45s,39m 38s,notebook_cell,2,0
+hiv,scaffold,cpu,Morgan + XGBoost,2,849.18,37.77,0.2359,14m 9s,13m 42s,14m 36s,notebook_cell,2,0
+hiv,scaffold,gpu,D-MPNN (2D),2,351134.34,15139.99,97.5373,97h 32m 14s,94h 33m 49s,100h 30m 40s,notebook_cell,2,3
+hiv,scaffold,gpu,GIN (2D),3,676.0,131.73,0.1878,11m 16s,9m 35s,13m 45s,history_mtime_approx,0,3
+hiv,scaffold,gpu,GIN (3D),2,543.79,16.38,0.1511,9m 4s,8m 52s,9m 15s,notebook_cell,2,3
+hiv,scaffold,gpu,SMILES LSTM,3,2306.41,470.72,0.6407,38m 26s,29m 33s,44m 25s,notebook_cell,3,1
+hiv,scaffold,gpu,SchNet (3D coords),4,942.86,151.87,0.2619,15m 43s,13m 21s,18m 10s,notebook_cell,4,1
+lipophilicity,random,gpu,D-MPNN (2D),5,130860.52,10016.18,36.3501,36h 21m 1s,34h 16m 49s,40h 55m 51s,notebook_cell,5,0
+lipophilicity,random,gpu,GIN (2D),5,228.17,24.46,0.0634,3m 48s,3m 28s,4m 29s,notebook_cell,5,0
+lipophilicity,random,gpu,GIN (3D),5,253.68,34.88,0.0705,4m 14s,3m 37s,5m 6s,notebook_cell,5,0
+lipophilicity,random,gpu,SMILES LSTM,5,636.16,178.59,0.1767,10m 36s,7m 38s,13m 52s,notebook_cell,5,0
+lipophilicity,random,gpu,SchNet (3D coords),5,373.47,43.3,0.1037,6m 13s,5m 6s,6m 58s,notebook_cell,5,0
+lipophilicity,scaffold,gpu,D-MPNN (2D),3,125645.97,9022.83,34.9017,34h 54m 6s,32h 5m 31s,36h 54m 26s,notebook_cell,3,2
+lipophilicity,scaffold,gpu,GIN (2D),2,204.45,28.58,0.0568,3m 24s,3m 4s,3m 45s,notebook_cell,2,1
+lipophilicity,scaffold,gpu,GIN (3D),3,252.37,33.0,0.0701,4m 12s,3m 38s,4m 44s,notebook_cell,3,2
+lipophilicity,scaffold,gpu,SMILES LSTM,5,701.08,123.67,0.1947,11m 41s,8m 23s,14m 1s,notebook_cell,5,0
+lipophilicity,scaffold,gpu,SchNet (3D coords),3,355.24,31.94,0.0987,5m 55s,5m 21s,6m 24s,notebook_cell,3,2
+tox21,random,cpu,Combined + XGBoost,2,4456.69,639.1,1.238,1h 14m 17s,1h 6m 45s,1h 21m 49s,notebook_cell,2,0
+tox21,random,cpu,Descriptors + RF,2,1265.09,31.9,0.3514,21m 5s,20m 43s,21m 28s,notebook_cell,2,0
+tox21,random,cpu,Descriptors + SVM,2,241.28,23.38,0.067,4m 1s,3m 45s,4m 18s,notebook_cell,2,0
+tox21,random,cpu,Descriptors + XGBoost,2,1329.83,11.34,0.3694,22m 10s,22m 2s,22m 18s,notebook_cell,2,0
+tox21,random,cpu,Morgan + RF,2,5817.93,1790.85,1.6161,1h 36m 58s,1h 15m 52s,1h 58m 4s,notebook_cell,2,0
+tox21,random,cpu,Morgan + SVM,2,5767.2,877.36,1.602,1h 36m 7s,1h 25m 47s,1h 46m 28s,notebook_cell,2,0
+tox21,random,cpu,Morgan + XGBoost,2,3232.39,275.06,0.8979,53m 52s,50m 38s,57m 7s,notebook_cell,2,0
+tox21,random,gpu,D-MPNN (2D),5,142798.33,10049.71,39.6662,39h 39m 58s,36h 52m 60s,43h 0m 24s,notebook_cell,5,0
+tox21,random,gpu,GIN (2D),5,253.07,24.72,0.0703,4m 13s,3m 32s,4m 35s,notebook_cell,5,0
+tox21,random,gpu,GIN (3D),5,260.98,41.2,0.0725,4m 21s,3m 33s,5m 25s,notebook_cell,5,0
+tox21,random,gpu,SMILES LSTM,5,1230.12,268.89,0.3417,20m 30s,16m 59s,28m 15s,notebook_cell,5,0
+tox21,random,gpu,SchNet (3D coords),5,396.73,39.64,0.1102,6m 37s,5m 43s,7m 25s,notebook_cell,5,0
+tox21,scaffold,gpu,D-MPNN (2D),3,109111.6,9143.43,30.3088,30h 18m 32s,27h 41m 28s,32h 45m 46s,notebook_cell,3,2
+tox21,scaffold,gpu,GIN (2D),3,242.85,33.32,0.0675,4m 3s,3m 28s,4m 34s,notebook_cell,3,0
+tox21,scaffold,gpu,GIN (3D),3,289.64,39.84,0.0805,4m 50s,4m 24s,5m 36s,notebook_cell,3,2
+tox21,scaffold,gpu,SMILES LSTM,4,1129.86,189.68,0.3139,18m 50s,16m 7s,22m 5s,notebook_cell,4,1
+tox21,scaffold,gpu,SchNet (3D coords),3,386.52,25.0,0.1074,6m 27s,5m 59s,6m 47s,notebook_cell,3,2

@@ -1,0 +1,11 @@
+# Minimal deps for conformer_generation.py on RWTH (CPU).
+# Pin NumPy 1.x — RDKit wheels on Python 3.9 break with NumPy 2.x.
+
+numpy==1.26.4
+pandas
+pytz
+python-dateutil
+tqdm
+scipy
+scikit-learn
+rdkit-pypi

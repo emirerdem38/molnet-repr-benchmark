@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+.ipynb_checkpoints/
+data/raw/
+data/conformers/
+data/*.pkl
+data/*.sdf
+results/seed_*/
+*.log
+.cluster_logs/

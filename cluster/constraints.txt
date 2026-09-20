@@ -1,0 +1,5 @@
+# Pip constraint for benchmark v5.
+# RDKit 2026 + scipy 1.18 + scikit-learn 1.9 REQUIRE NumPy 2.x.
+# (The old "numpy<2 for RDKit" rule was for rdkit-pypi on Python 3.9 and is
+# obsolete — pinning numpy 1.x now breaks scipy with "np.long" errors.)
+numpy>=2.0

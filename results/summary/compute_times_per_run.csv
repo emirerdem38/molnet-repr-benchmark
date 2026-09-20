@@ -1,0 +1,363 @@
+dataset,split,seed,device,model,seconds,hours,human,source,note
+bace,random,0,gpu,D-MPNN (2D),129861.12,36.0725,36h 4m 21s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bace,random,0,gpu,GIN (2D),226.49,0.0629,3m 46s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bace,random,0,gpu,GIN (3D),247.92,0.0689,4m 8s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bace,random,0,gpu,SMILES LSTM,628.18,0.1745,10m 28s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bace,random,0,gpu,SchNet (3D coords),383.36,0.1065,6m 23s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bace,random,1,gpu,D-MPNN (2D),86679.01,24.0775,24h 4m 39s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bace,random,1,gpu,GIN (2D),245.46,0.0682,4m 5s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bace,random,1,gpu,GIN (3D),296.57,0.0824,4m 57s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bace,random,1,gpu,SMILES LSTM,503.34,0.1398,8m 23s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bace,random,1,gpu,SchNet (3D coords),409.82,0.1138,6m 50s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bace,random,2,gpu,D-MPNN (2D),109279.55,30.3554,30h 21m 20s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bace,random,2,gpu,GIN (2D),248.78,0.0691,4m 9s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bace,random,2,gpu,GIN (3D),282.75,0.0785,4m 43s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bace,random,2,gpu,SMILES LSTM,584.52,0.1624,9m 45s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bace,random,2,gpu,SchNet (3D coords),351.18,0.0975,5m 51s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bace,random,3,gpu,D-MPNN (2D),104576.55,29.049,29h 2m 57s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bace,random,3,gpu,GIN (2D),255.54,0.071,4m 16s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bace,random,3,gpu,GIN (3D),323.8,0.0899,5m 24s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bace,random,3,gpu,SMILES LSTM,574.87,0.1597,9m 35s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bace,random,3,gpu,SchNet (3D coords),361.17,0.1003,6m 1s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bace,random,4,gpu,D-MPNN (2D),76853.87,21.3483,21h 20m 54s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bace,random,4,gpu,GIN (2D),202.86,0.0564,3m 23s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bace,random,4,gpu,GIN (3D),241.54,0.0671,4m 2s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bace,random,4,gpu,SMILES LSTM,439.4,0.1221,7m 19s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bace,random,4,gpu,SchNet (3D coords),300.91,0.0836,5m 1s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bace,scaffold,0,gpu,D-MPNN (2D),45292.0,12.5811,12h 34m 52s,history_mtime,approx from history file mtime deltas
+bace,scaffold,0,gpu,GIN (3D),3770.0,1.0472,1h 2m 50s,history_mtime,approx from history file mtime deltas
+bace,scaffold,0,gpu,SMILES LSTM,26558.0,7.3772,7h 22m 38s,history_mtime,approx from history file mtime deltas
+bace,scaffold,0,gpu,SchNet (3D coords),82322.0,22.8672,22h 52m 2s,history_mtime,approx from history file mtime deltas
+bace,scaffold,1,gpu,D-MPNN (2D),78343.0,21.7619,21h 45m 43s,history_mtime,approx from history file mtime deltas
+bace,scaffold,1,gpu,GIN (3D),13632.0,3.7867,3h 47m 12s,history_mtime,approx from history file mtime deltas
+bace,scaffold,1,gpu,SMILES LSTM,20056.0,5.5711,5h 34m 16s,history_mtime,approx from history file mtime deltas
+bace,scaffold,1,gpu,SchNet (3D coords),30665.0,8.5181,8h 31m 5s,history_mtime,approx from history file mtime deltas
+bace,scaffold,2,gpu,D-MPNN (2D),81040.0,22.5111,22h 30m 40s,history_mtime,approx from history file mtime deltas
+bace,scaffold,2,gpu,GIN (3D),11594.0,3.2206,3h 13m 14s,history_mtime,approx from history file mtime deltas
+bace,scaffold,2,gpu,SMILES LSTM,36565.0,10.1569,10h 9m 25s,history_mtime,approx from history file mtime deltas
+bace,scaffold,2,gpu,SchNet (3D coords),24766.0,6.8794,6h 52m 46s,history_mtime,approx from history file mtime deltas
+bace,scaffold,3,gpu,D-MPNN (2D),87869.0,24.4081,24h 24m 29s,history_mtime,approx from history file mtime deltas
+bace,scaffold,3,gpu,GIN (3D),4707.0,1.3075,1h 18m 27s,history_mtime,approx from history file mtime deltas
+bace,scaffold,3,gpu,SMILES LSTM,34429.0,9.5636,9h 33m 49s,history_mtime,approx from history file mtime deltas
+bace,scaffold,3,gpu,SchNet (3D coords),23017.0,6.3936,6h 23m 37s,history_mtime,approx from history file mtime deltas
+bace,scaffold,4,gpu,D-MPNN (2D),77328.0,21.48,21h 28m 48s,history_mtime,approx from history file mtime deltas
+bace,scaffold,4,gpu,GIN (3D),15689.0,4.3581,4h 21m 29s,history_mtime,approx from history file mtime deltas
+bace,scaffold,4,gpu,SMILES LSTM,22752.0,6.32,6h 19m 12s,history_mtime,approx from history file mtime deltas
+bace,scaffold,4,gpu,SchNet (3D coords),35926.0,9.9794,9h 58m 46s,history_mtime,approx from history file mtime deltas
+bbbp,random,0,gpu,D-MPNN (2D),76293.01,21.1925,21h 11m 33s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bbbp,random,0,gpu,GIN (2D),184.88,0.0514,3m 5s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bbbp,random,0,gpu,GIN (3D),224.49,0.0624,3m 44s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bbbp,random,0,gpu,SMILES LSTM,1420.9,0.3947,23m 41s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bbbp,random,0,gpu,SchNet (3D coords),301.64,0.0838,5m 2s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bbbp,random,1,gpu,D-MPNN (2D),90495.46,25.1376,25h 8m 15s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bbbp,random,1,gpu,GIN (2D),248.48,0.069,4m 8s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bbbp,random,1,gpu,GIN (3D),404.44,0.1123,6m 44s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bbbp,random,1,gpu,SMILES LSTM,1091.05,0.3031,18m 11s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bbbp,random,1,gpu,SchNet (3D coords),483.42,0.1343,8m 3s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bbbp,random,2,gpu,D-MPNN (2D),70767.96,19.6578,19h 39m 28s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bbbp,random,2,gpu,GIN (2D),206.18,0.0573,3m 26s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bbbp,random,2,gpu,GIN (3D),244.42,0.0679,4m 4s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bbbp,random,2,gpu,SMILES LSTM,733.89,0.2039,12m 14s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bbbp,random,2,gpu,SchNet (3D coords),363.44,0.101,6m 3s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bbbp,random,3,gpu,D-MPNN (2D),83365.56,23.1571,23h 9m 26s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bbbp,random,3,gpu,GIN (2D),223.31,0.062,3m 43s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bbbp,random,3,gpu,GIN (3D),265.69,0.0738,4m 26s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bbbp,random,3,gpu,SMILES LSTM,1108.65,0.308,18m 29s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bbbp,random,3,gpu,SchNet (3D coords),355.97,0.0989,5m 56s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bbbp,random,4,gpu,D-MPNN (2D),72797.7,20.2216,20h 13m 18s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bbbp,random,4,gpu,GIN (2D),275.99,0.0767,4m 36s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bbbp,random,4,gpu,GIN (3D),319.68,0.0888,5m 20s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bbbp,random,4,gpu,SMILES LSTM,687.7,0.191,11m 28s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bbbp,random,4,gpu,SchNet (3D coords),411.63,0.1143,6m 52s,notebook_cell,Jupyter cell wall time (HPO + final train)
+bbbp,scaffold,0,gpu,D-MPNN (2D),56814.0,15.7817,15h 46m 54s,history_mtime,approx from history file mtime deltas
+bbbp,scaffold,0,gpu,GIN (3D),1607.0,0.4464,26m 47s,history_mtime,approx from history file mtime deltas
+bbbp,scaffold,0,gpu,SMILES LSTM,78500.0,21.8056,21h 48m 20s,history_mtime,approx from history file mtime deltas
+bbbp,scaffold,0,gpu,SchNet (3D coords),19371.0,5.3808,5h 22m 51s,history_mtime,approx from history file mtime deltas
+bbbp,scaffold,1,gpu,D-MPNN (2D),45336.0,12.5933,12h 35m 36s,history_mtime,approx from history file mtime deltas
+bbbp,scaffold,1,gpu,GIN (3D),2089.0,0.5803,34m 49s,history_mtime,approx from history file mtime deltas
+bbbp,scaffold,1,gpu,SMILES LSTM,49841.0,13.8447,13h 50m 41s,history_mtime,approx from history file mtime deltas
+bbbp,scaffold,1,gpu,SchNet (3D coords),20676.0,5.7433,5h 44m 36s,history_mtime,approx from history file mtime deltas
+bbbp,scaffold,2,gpu,D-MPNN (2D),54148.0,15.0411,15h 2m 28s,history_mtime,approx from history file mtime deltas
+bbbp,scaffold,2,gpu,GIN (3D),1125.0,0.3125,18m 45s,history_mtime,approx from history file mtime deltas
+bbbp,scaffold,2,gpu,SMILES LSTM,44365.0,12.3236,12h 19m 25s,history_mtime,approx from history file mtime deltas
+bbbp,scaffold,2,gpu,SchNet (3D coords),11516.0,3.1989,3h 11m 56s,history_mtime,approx from history file mtime deltas
+bbbp,scaffold,3,gpu,D-MPNN (2D),46778.0,12.9939,12h 59m 38s,history_mtime,approx from history file mtime deltas
+bbbp,scaffold,3,gpu,GIN (3D),1391.0,0.3864,23m 11s,history_mtime,approx from history file mtime deltas
+bbbp,scaffold,3,gpu,SMILES LSTM,33650.0,9.3472,9h 20m 50s,history_mtime,approx from history file mtime deltas
+bbbp,scaffold,3,gpu,SchNet (3D coords),15976.0,4.4378,4h 26m 16s,history_mtime,approx from history file mtime deltas
+bbbp,scaffold,4,gpu,D-MPNN (2D),51411.0,14.2808,14h 16m 51s,history_mtime,approx from history file mtime deltas
+bbbp,scaffold,4,gpu,GIN (3D),1558.0,0.4328,25m 58s,history_mtime,approx from history file mtime deltas
+bbbp,scaffold,4,gpu,SMILES LSTM,57442.0,15.9561,15h 57m 22s,history_mtime,approx from history file mtime deltas
+bbbp,scaffold,4,gpu,SchNet (3D coords),17572.0,4.8811,4h 52m 52s,history_mtime,approx from history file mtime deltas
+esol,random,0,gpu,D-MPNN (2D),27638.26,7.6773,7h 40m 38s,notebook_cell,Jupyter cell wall time (HPO + final train)
+esol,random,0,gpu,GIN (2D),151.35,0.042,2m 31s,notebook_cell,Jupyter cell wall time (HPO + final train)
+esol,random,0,gpu,GIN (3D),188.64,0.0524,3m 9s,notebook_cell,Jupyter cell wall time (HPO + final train)
+esol,random,0,gpu,SMILES LSTM,251.76,0.0699,4m 12s,notebook_cell,Jupyter cell wall time (HPO + final train)
+esol,random,0,gpu,SchNet (3D coords),315.46,0.0876,5m 15s,notebook_cell,Jupyter cell wall time (HPO + final train)
+esol,random,1,gpu,D-MPNN (2D),17362.84,4.823,4h 49m 23s,notebook_cell,Jupyter cell wall time (HPO + final train)
+esol,random,1,gpu,GIN (2D),143.25,0.0398,2m 23s,notebook_cell,Jupyter cell wall time (HPO + final train)
+esol,random,1,gpu,GIN (3D),121.13,0.0336,2m 1s,notebook_cell,Jupyter cell wall time (HPO + final train)
+esol,random,1,gpu,SMILES LSTM,282.12,0.0784,4m 42s,notebook_cell,Jupyter cell wall time (HPO + final train)
+esol,random,1,gpu,SchNet (3D coords),229.4,0.0637,3m 49s,notebook_cell,Jupyter cell wall time (HPO + final train)
+esol,random,2,gpu,D-MPNN (2D),25192.31,6.9979,6h 59m 52s,notebook_cell,Jupyter cell wall time (HPO + final train)
+esol,random,2,gpu,GIN (2D),134.77,0.0374,2m 15s,notebook_cell,Jupyter cell wall time (HPO + final train)
+esol,random,2,gpu,GIN (3D),113.66,0.0316,1m 54s,notebook_cell,Jupyter cell wall time (HPO + final train)
+esol,random,2,gpu,SMILES LSTM,289.86,0.0805,4m 50s,notebook_cell,Jupyter cell wall time (HPO + final train)
+esol,random,2,gpu,SchNet (3D coords),168.48,0.0468,2m 48s,notebook_cell,Jupyter cell wall time (HPO + final train)
+esol,random,3,gpu,D-MPNN (2D),26043.41,7.2343,7h 14m 3s,notebook_cell,Jupyter cell wall time (HPO + final train)
+esol,random,3,gpu,GIN (2D),135.73,0.0377,2m 16s,notebook_cell,Jupyter cell wall time (HPO + final train)
+esol,random,3,gpu,GIN (3D),178.35,0.0495,2m 58s,notebook_cell,Jupyter cell wall time (HPO + final train)
+esol,random,3,gpu,SMILES LSTM,214.36,0.0595,3m 34s,notebook_cell,Jupyter cell wall time (HPO + final train)
+esol,random,3,gpu,SchNet (3D coords),275.6,0.0766,4m 36s,notebook_cell,Jupyter cell wall time (HPO + final train)
+esol,random,4,gpu,D-MPNN (2D),31066.94,8.6297,8h 37m 47s,notebook_cell,Jupyter cell wall time (HPO + final train)
+esol,random,4,gpu,GIN (2D),174.91,0.0486,2m 55s,notebook_cell,Jupyter cell wall time (HPO + final train)
+esol,random,4,gpu,GIN (3D),161.22,0.0448,2m 41s,notebook_cell,Jupyter cell wall time (HPO + final train)
+esol,random,4,gpu,SMILES LSTM,225.49,0.0626,3m 45s,notebook_cell,Jupyter cell wall time (HPO + final train)
+esol,random,4,gpu,SchNet (3D coords),271.29,0.0754,4m 31s,notebook_cell,Jupyter cell wall time (HPO + final train)
+esol,scaffold,0,gpu,D-MPNN (2D),20904.0,5.8067,5h 48m 24s,history_mtime,approx from history file mtime deltas
+esol,scaffold,0,gpu,GIN (3D),1036.0,0.2878,17m 16s,history_mtime,approx from history file mtime deltas
+esol,scaffold,0,gpu,SMILES LSTM,6946.0,1.9294,1h 55m 46s,history_mtime,approx from history file mtime deltas
+esol,scaffold,0,gpu,SchNet (3D coords),7653.0,2.1258,2h 7m 33s,history_mtime,approx from history file mtime deltas
+esol,scaffold,1,gpu,D-MPNN (2D),25884.0,7.19,7h 11m 24s,history_mtime,approx from history file mtime deltas
+esol,scaffold,1,gpu,GIN (3D),1021.0,0.2836,17m 1s,history_mtime,approx from history file mtime deltas
+esol,scaffold,1,gpu,SMILES LSTM,5129.0,1.4247,1h 25m 29s,history_mtime,approx from history file mtime deltas
+esol,scaffold,1,gpu,SchNet (3D coords),9287.0,2.5797,2h 34m 47s,history_mtime,approx from history file mtime deltas
+esol,scaffold,2,gpu,D-MPNN (2D),21214.8,5.893,5h 53m 35s,notebook_cell,Jupyter cell wall time (HPO + final train)
+esol,scaffold,2,gpu,GIN (2D),140.09,0.0389,2m 20s,notebook_cell,Jupyter cell wall time (HPO + final train)
+esol,scaffold,2,gpu,GIN (3D),200.26,0.0556,3m 20s,notebook_cell,Jupyter cell wall time (HPO + final train)
+esol,scaffold,2,gpu,SMILES LSTM,231.44,0.0643,3m 51s,notebook_cell,Jupyter cell wall time (HPO + final train)
+esol,scaffold,2,gpu,SchNet (3D coords),289.4,0.0804,4m 49s,notebook_cell,Jupyter cell wall time (HPO + final train)
+esol,scaffold,3,gpu,D-MPNN (2D),25078.14,6.9662,6h 57m 58s,notebook_cell,Jupyter cell wall time (HPO + final train)
+esol,scaffold,3,gpu,GIN (2D),161.94,0.045,2m 42s,notebook_cell,Jupyter cell wall time (HPO + final train)
+esol,scaffold,3,gpu,GIN (3D),173.32,0.0481,2m 53s,notebook_cell,Jupyter cell wall time (HPO + final train)
+esol,scaffold,3,gpu,SMILES LSTM,179.69,0.0499,2m 60s,notebook_cell,Jupyter cell wall time (HPO + final train)
+esol,scaffold,3,gpu,SchNet (3D coords),296.56,0.0824,4m 57s,notebook_cell,Jupyter cell wall time (HPO + final train)
+esol,scaffold,4,gpu,D-MPNN (2D),19359.04,5.3775,5h 22m 39s,notebook_cell,Jupyter cell wall time (HPO + final train)
+esol,scaffold,4,gpu,GIN (2D),123.46,0.0343,2m 3s,notebook_cell,Jupyter cell wall time (HPO + final train)
+esol,scaffold,4,gpu,GIN (3D),144.65,0.0402,2m 25s,notebook_cell,Jupyter cell wall time (HPO + final train)
+esol,scaffold,4,gpu,SMILES LSTM,160.48,0.0446,2m 40s,notebook_cell,Jupyter cell wall time (HPO + final train)
+esol,scaffold,4,gpu,SchNet (3D coords),241.45,0.0671,4m 1s,notebook_cell,Jupyter cell wall time (HPO + final train)
+freesolv,random,0,gpu,D-MPNN (2D),7490.72,2.0808,2h 4m 51s,notebook_cell,Jupyter cell wall time (HPO + final train)
+freesolv,random,0,gpu,GIN (2D),74.92,0.0208,1m 15s,notebook_cell,Jupyter cell wall time (HPO + final train)
+freesolv,random,0,gpu,GIN (3D),83.61,0.0232,1m 24s,notebook_cell,Jupyter cell wall time (HPO + final train)
+freesolv,random,0,gpu,SMILES LSTM,126.17,0.035,2m 6s,notebook_cell,Jupyter cell wall time (HPO + final train)
+freesolv,random,0,gpu,SchNet (3D coords),120.53,0.0335,2m 1s,notebook_cell,Jupyter cell wall time (HPO + final train)
+freesolv,random,1,gpu,D-MPNN (2D),6259.28,1.7387,1h 44m 19s,notebook_cell,Jupyter cell wall time (HPO + final train)
+freesolv,random,1,gpu,GIN (2D),71.88,0.02,1m 12s,notebook_cell,Jupyter cell wall time (HPO + final train)
+freesolv,random,1,gpu,GIN (3D),93.54,0.026,1m 34s,notebook_cell,Jupyter cell wall time (HPO + final train)
+freesolv,random,1,gpu,SMILES LSTM,129.61,0.036,2m 10s,notebook_cell,Jupyter cell wall time (HPO + final train)
+freesolv,random,1,gpu,SchNet (3D coords),158.51,0.044,2m 39s,notebook_cell,Jupyter cell wall time (HPO + final train)
+freesolv,random,2,gpu,D-MPNN (2D),7565.61,2.1016,2h 6m 6s,notebook_cell,Jupyter cell wall time (HPO + final train)
+freesolv,random,2,gpu,GIN (2D),66.56,0.0185,1m 7s,notebook_cell,Jupyter cell wall time (HPO + final train)
+freesolv,random,2,gpu,GIN (3D),69.22,0.0192,1m 9s,notebook_cell,Jupyter cell wall time (HPO + final train)
+freesolv,random,2,gpu,SMILES LSTM,131.55,0.0365,2m 12s,notebook_cell,Jupyter cell wall time (HPO + final train)
+freesolv,random,2,gpu,SchNet (3D coords),140.06,0.0389,2m 20s,notebook_cell,Jupyter cell wall time (HPO + final train)
+freesolv,random,3,gpu,D-MPNN (2D),8202.45,2.2785,2h 16m 42s,notebook_cell,Jupyter cell wall time (HPO + final train)
+freesolv,random,3,gpu,GIN (2D),80.94,0.0225,1m 21s,notebook_cell,Jupyter cell wall time (HPO + final train)
+freesolv,random,3,gpu,GIN (3D),118.48,0.0329,1m 58s,notebook_cell,Jupyter cell wall time (HPO + final train)
+freesolv,random,3,gpu,SMILES LSTM,109.14,0.0303,1m 49s,notebook_cell,Jupyter cell wall time (HPO + final train)
+freesolv,random,3,gpu,SchNet (3D coords),124.64,0.0346,2m 5s,notebook_cell,Jupyter cell wall time (HPO + final train)
+freesolv,random,4,gpu,D-MPNN (2D),7264.48,2.0179,2h 1m 4s,notebook_cell,Jupyter cell wall time (HPO + final train)
+freesolv,random,4,gpu,GIN (2D),78.43,0.0218,1m 18s,notebook_cell,Jupyter cell wall time (HPO + final train)
+freesolv,random,4,gpu,GIN (3D),78.04,0.0217,1m 18s,notebook_cell,Jupyter cell wall time (HPO + final train)
+freesolv,random,4,gpu,SMILES LSTM,106.1,0.0295,1m 46s,notebook_cell,Jupyter cell wall time (HPO + final train)
+freesolv,random,4,gpu,SchNet (3D coords),124.35,0.0345,2m 4s,notebook_cell,Jupyter cell wall time (HPO + final train)
+freesolv,scaffold,0,gpu,D-MPNN (2D),7591.0,2.1086,2h 6m 31s,history_mtime,approx from history file mtime deltas
+freesolv,scaffold,0,gpu,GIN (3D),934.0,0.2594,15m 34s,history_mtime,approx from history file mtime deltas
+freesolv,scaffold,0,gpu,SMILES LSTM,9895.0,2.7486,2h 44m 55s,history_mtime,approx from history file mtime deltas
+freesolv,scaffold,0,gpu,SchNet (3D coords),3145.0,0.8736,52m 25s,history_mtime,approx from history file mtime deltas
+freesolv,scaffold,1,gpu,D-MPNN (2D),6853.0,1.9036,1h 54m 13s,history_mtime,approx from history file mtime deltas
+freesolv,scaffold,1,gpu,GIN (3D),803.0,0.2231,13m 23s,history_mtime,approx from history file mtime deltas
+freesolv,scaffold,1,gpu,SMILES LSTM,9711.0,2.6975,2h 41m 51s,history_mtime,approx from history file mtime deltas
+freesolv,scaffold,1,gpu,SchNet (3D coords),4014.0,1.115,1h 6m 54s,history_mtime,approx from history file mtime deltas
+freesolv,scaffold,2,gpu,D-MPNN (2D),6386.73,1.7741,1h 46m 27s,notebook_cell,Jupyter cell wall time (HPO + final train)
+freesolv,scaffold,2,gpu,GIN (2D),57.62,0.016,57.6s,notebook_cell,Jupyter cell wall time (HPO + final train)
+freesolv,scaffold,2,gpu,GIN (3D),103.06,0.0286,1m 43s,notebook_cell,Jupyter cell wall time (HPO + final train)
+freesolv,scaffold,2,gpu,SMILES LSTM,138.05,0.0383,2m 18s,notebook_cell,Jupyter cell wall time (HPO + final train)
+freesolv,scaffold,2,gpu,SchNet (3D coords),183.59,0.051,3m 4s,notebook_cell,Jupyter cell wall time (HPO + final train)
+freesolv,scaffold,3,gpu,D-MPNN (2D),6639.12,1.8442,1h 50m 39s,notebook_cell,Jupyter cell wall time (HPO + final train)
+freesolv,scaffold,3,gpu,GIN (2D),54.68,0.0152,54.7s,notebook_cell,Jupyter cell wall time (HPO + final train)
+freesolv,scaffold,3,gpu,GIN (3D),110.49,0.0307,1m 50s,notebook_cell,Jupyter cell wall time (HPO + final train)
+freesolv,scaffold,3,gpu,SMILES LSTM,98.38,0.0273,1m 38s,notebook_cell,Jupyter cell wall time (HPO + final train)
+freesolv,scaffold,3,gpu,SchNet (3D coords),163.47,0.0454,2m 43s,notebook_cell,Jupyter cell wall time (HPO + final train)
+freesolv,scaffold,4,gpu,D-MPNN (2D),6292.25,1.7478,1h 44m 52s,notebook_cell,Jupyter cell wall time (HPO + final train)
+freesolv,scaffold,4,gpu,GIN (2D),49.59,0.0138,49.6s,notebook_cell,Jupyter cell wall time (HPO + final train)
+freesolv,scaffold,4,gpu,GIN (3D),90.44,0.0251,1m 30s,notebook_cell,Jupyter cell wall time (HPO + final train)
+freesolv,scaffold,4,gpu,SMILES LSTM,122.41,0.034,2m 2s,notebook_cell,Jupyter cell wall time (HPO + final train)
+freesolv,scaffold,4,gpu,SchNet (3D coords),142.92,0.0397,2m 23s,notebook_cell,Jupyter cell wall time (HPO + final train)
+hiv,random,0,gpu,GIN (2D),868.0,0.2411,14m 28s,history_mtime,approx from history file mtime deltas (from SLURM job start; includes setup)
+hiv,random,0,gpu,GIN (3D),7904.0,2.1956,2h 11m 44s,history_mtime,approx from history file mtime deltas
+hiv,random,0,gpu,SMILES LSTM,2674.8,0.743,44m 35s,notebook_cell,Jupyter cell wall time (HPO + final train)
+hiv,random,0,gpu,SchNet (3D coords),96123.0,26.7008,26h 42m 3s,history_mtime,approx from history file mtime deltas
+hiv,random,1,gpu,D-MPNN (2D),394434.72,109.5652,109h 33m 55s,notebook_cell,Jupyter cell wall time (HPO + final train)
+hiv,random,1,gpu,GIN (2D),885.0,0.2458,14m 45s,history_mtime,approx from history file mtime deltas (from SLURM job start; includes setup)
+hiv,random,1,gpu,GIN (3D),638.35,0.1773,10m 38s,notebook_cell,Jupyter cell wall time (HPO + final train)
+hiv,random,1,gpu,SMILES LSTM,2440.24,0.6778,40m 40s,notebook_cell,Jupyter cell wall time (HPO + final train)
+hiv,random,1,gpu,SchNet (3D coords),1104.67,0.3069,18m 25s,notebook_cell,Jupyter cell wall time (HPO + final train)
+hiv,random,2,gpu,GIN (2D),939.0,0.2608,15m 39s,history_mtime,approx from history file mtime deltas (from SLURM job start; includes setup)
+hiv,random,3,cpu,Combined + XGBoost,1019.49,0.2832,16m 59s,notebook_cell,Jupyter cell wall time (HPO + final train)
+hiv,random,3,cpu,Descriptors + RF,747.58,0.2077,12m 28s,notebook_cell,Jupyter cell wall time (HPO + final train)
+hiv,random,3,cpu,Descriptors + SVM,122.02,0.0339,2m 2s,notebook_cell,Jupyter cell wall time (HPO + final train)
+hiv,random,3,cpu,Descriptors + XGBoost,230.82,0.0641,3m 51s,notebook_cell,Jupyter cell wall time (HPO + final train)
+hiv,random,3,cpu,Morgan + RF,4299.76,1.1944,1h 11m 40s,notebook_cell,Jupyter cell wall time (HPO + final train)
+hiv,random,3,cpu,Morgan + SVM,2986.62,0.8296,49m 47s,notebook_cell,Jupyter cell wall time (HPO + final train)
+hiv,random,3,cpu,Morgan + XGBoost,877.6,0.2438,14m 38s,notebook_cell,Jupyter cell wall time (HPO + final train)
+hiv,random,3,gpu,GIN (2D),53837.0,14.9547,14h 57m 17s,history_mtime,approx from history file mtime deltas (from SLURM job start; includes setup)
+hiv,random,4,cpu,Combined + XGBoost,1219.34,0.3387,20m 19s,notebook_cell,Jupyter cell wall time (HPO + final train)
+hiv,random,4,cpu,Descriptors + RF,828.98,0.2303,13m 49s,notebook_cell,Jupyter cell wall time (HPO + final train)
+hiv,random,4,cpu,Descriptors + SVM,158.74,0.0441,2m 39s,notebook_cell,Jupyter cell wall time (HPO + final train)
+hiv,random,4,cpu,Descriptors + XGBoost,237.77,0.066,3m 58s,notebook_cell,Jupyter cell wall time (HPO + final train)
+hiv,random,4,cpu,Morgan + RF,4718.9,1.3108,1h 18m 39s,notebook_cell,Jupyter cell wall time (HPO + final train)
+hiv,random,4,cpu,Morgan + SVM,1732.49,0.4812,28m 52s,notebook_cell,Jupyter cell wall time (HPO + final train)
+hiv,random,4,cpu,Morgan + XGBoost,1006.25,0.2795,16m 46s,notebook_cell,Jupyter cell wall time (HPO + final train)
+hiv,random,4,gpu,D-MPNN (2D),402087.22,111.6909,111h 41m 27s,notebook_cell,Jupyter cell wall time (HPO + final train)
+hiv,random,4,gpu,GIN (2D),46285.0,12.8569,12h 51m 25s,history_mtime,approx from history file mtime deltas (from SLURM job start; includes setup)
+hiv,random,4,gpu,GIN (3D),686.38,0.1907,11m 26s,notebook_cell,Jupyter cell wall time (HPO + final train)
+hiv,random,4,gpu,SMILES LSTM,1811.46,0.5032,30m 11s,notebook_cell,Jupyter cell wall time (HPO + final train)
+hiv,random,4,gpu,SchNet (3D coords),1124.21,0.3123,18m 44s,notebook_cell,Jupyter cell wall time (HPO + final train)
+hiv,scaffold,0,gpu,D-MPNN (2D),283063.0,78.6286,78h 37m 43s,history_mtime,approx from history file mtime deltas
+hiv,scaffold,0,gpu,GIN (3D),4927.0,1.3686,1h 22m 7s,history_mtime,approx from history file mtime deltas
+hiv,scaffold,0,gpu,SMILES LSTM,415094.0,115.3039,115h 18m 14s,history_mtime,approx from history file mtime deltas
+hiv,scaffold,0,gpu,SchNet (3D coords),69317.0,19.2547,19h 15m 17s,history_mtime,approx from history file mtime deltas
+hiv,scaffold,1,cpu,Combined + XGBoost,1118.99,0.3108,18m 39s,notebook_cell,Jupyter cell wall time (HPO + final train)
+hiv,scaffold,1,cpu,Descriptors + RF,864.17,0.24,14m 24s,notebook_cell,Jupyter cell wall time (HPO + final train)
+hiv,scaffold,1,cpu,Descriptors + SVM,112.66,0.0313,1m 53s,notebook_cell,Jupyter cell wall time (HPO + final train)
+hiv,scaffold,1,cpu,Descriptors + XGBoost,221.5,0.0615,3m 42s,notebook_cell,Jupyter cell wall time (HPO + final train)
+hiv,scaffold,1,cpu,Morgan + RF,4396.23,1.2212,1h 13m 16s,notebook_cell,Jupyter cell wall time (HPO + final train)
+hiv,scaffold,1,cpu,Morgan + SVM,2377.93,0.6605,39m 38s,notebook_cell,Jupyter cell wall time (HPO + final train)
+hiv,scaffold,1,cpu,Morgan + XGBoost,875.89,0.2433,14m 36s,notebook_cell,Jupyter cell wall time (HPO + final train)
+hiv,scaffold,1,gpu,D-MPNN (2D),340428.75,94.5635,94h 33m 49s,notebook_cell,Jupyter cell wall time (HPO + final train)
+hiv,scaffold,1,gpu,GIN (3D),555.37,0.1543,9m 15s,notebook_cell,Jupyter cell wall time (HPO + final train)
+hiv,scaffold,1,gpu,SchNet (3D coords),801.25,0.2226,13m 21s,notebook_cell,Jupyter cell wall time (HPO + final train)
+hiv,scaffold,2,cpu,Combined + XGBoost,1017.13,0.2825,16m 57s,notebook_cell,Jupyter cell wall time (HPO + final train)
+hiv,scaffold,2,cpu,Descriptors + RF,699.96,0.1944,11m 40s,notebook_cell,Jupyter cell wall time (HPO + final train)
+hiv,scaffold,2,cpu,Descriptors + SVM,106.98,0.0297,1m 47s,notebook_cell,Jupyter cell wall time (HPO + final train)
+hiv,scaffold,2,cpu,Descriptors + XGBoost,253.89,0.0705,4m 14s,notebook_cell,Jupyter cell wall time (HPO + final train)
+hiv,scaffold,2,cpu,Morgan + RF,5383.27,1.4954,1h 29m 43s,notebook_cell,Jupyter cell wall time (HPO + final train)
+hiv,scaffold,2,cpu,Morgan + SVM,1005.15,0.2792,16m 45s,notebook_cell,Jupyter cell wall time (HPO + final train)
+hiv,scaffold,2,cpu,Morgan + XGBoost,822.47,0.2285,13m 42s,notebook_cell,Jupyter cell wall time (HPO + final train)
+hiv,scaffold,2,gpu,D-MPNN (2D),361839.93,100.5111,100h 30m 40s,notebook_cell,Jupyter cell wall time (HPO + final train)
+hiv,scaffold,2,gpu,GIN (2D),575.0,0.1597,9m 35s,history_mtime,approx from history file mtime deltas (from SLURM job start; includes setup)
+hiv,scaffold,2,gpu,GIN (3D),532.21,0.1478,8m 52s,notebook_cell,Jupyter cell wall time (HPO + final train)
+hiv,scaffold,2,gpu,SMILES LSTM,2481.05,0.6892,41m 21s,notebook_cell,Jupyter cell wall time (HPO + final train)
+hiv,scaffold,2,gpu,SchNet (3D coords),822.83,0.2286,13m 43s,notebook_cell,Jupyter cell wall time (HPO + final train)
+hiv,scaffold,3,gpu,D-MPNN (2D),829623.0,230.4508,230h 27m 3s,history_mtime,approx from history file mtime deltas
+hiv,scaffold,3,gpu,GIN (2D),825.0,0.2292,13m 45s,history_mtime,approx from history file mtime deltas (from SLURM job start; includes setup)
+hiv,scaffold,3,gpu,GIN (3D),7675.0,2.1319,2h 7m 55s,history_mtime,approx from history file mtime deltas
+hiv,scaffold,3,gpu,SMILES LSTM,2664.85,0.7402,44m 25s,notebook_cell,Jupyter cell wall time (HPO + final train)
+hiv,scaffold,3,gpu,SchNet (3D coords),1057.74,0.2938,17m 38s,notebook_cell,Jupyter cell wall time (HPO + final train)
+hiv,scaffold,4,gpu,D-MPNN (2D),815923.0,226.6453,226h 38m 43s,history_mtime,approx from history file mtime deltas
+hiv,scaffold,4,gpu,GIN (2D),628.0,0.1744,10m 28s,history_mtime,approx from history file mtime deltas (from SLURM job start; includes setup)
+hiv,scaffold,4,gpu,GIN (3D),6632.0,1.8422,1h 50m 32s,history_mtime,approx from history file mtime deltas
+hiv,scaffold,4,gpu,SMILES LSTM,1773.33,0.4926,29m 33s,notebook_cell,Jupyter cell wall time (HPO + final train)
+hiv,scaffold,4,gpu,SchNet (3D coords),1089.61,0.3027,18m 10s,notebook_cell,Jupyter cell wall time (HPO + final train)
+lipophilicity,random,0,gpu,D-MPNN (2D),123408.68,34.2802,34h 16m 49s,notebook_cell,Jupyter cell wall time (HPO + final train)
+lipophilicity,random,0,gpu,GIN (2D),207.96,0.0578,3m 28s,notebook_cell,Jupyter cell wall time (HPO + final train)
+lipophilicity,random,0,gpu,GIN (3D),230.98,0.0642,3m 51s,notebook_cell,Jupyter cell wall time (HPO + final train)
+lipophilicity,random,0,gpu,SMILES LSTM,824.33,0.229,13m 44s,notebook_cell,Jupyter cell wall time (HPO + final train)
+lipophilicity,random,0,gpu,SchNet (3D coords),359.65,0.0999,5m 60s,notebook_cell,Jupyter cell wall time (HPO + final train)
+lipophilicity,random,1,gpu,D-MPNN (2D),125768.61,34.9357,34h 56m 9s,notebook_cell,Jupyter cell wall time (HPO + final train)
+lipophilicity,random,1,gpu,GIN (2D),229.55,0.0638,3m 50s,notebook_cell,Jupyter cell wall time (HPO + final train)
+lipophilicity,random,1,gpu,GIN (3D),269.13,0.0748,4m 29s,notebook_cell,Jupyter cell wall time (HPO + final train)
+lipophilicity,random,1,gpu,SMILES LSTM,832.03,0.2311,13m 52s,notebook_cell,Jupyter cell wall time (HPO + final train)
+lipophilicity,random,1,gpu,SchNet (3D coords),389.64,0.1082,6m 30s,notebook_cell,Jupyter cell wall time (HPO + final train)
+lipophilicity,random,2,gpu,D-MPNN (2D),147350.58,40.9307,40h 55m 51s,notebook_cell,Jupyter cell wall time (HPO + final train)
+lipophilicity,random,2,gpu,GIN (2D),268.88,0.0747,4m 29s,notebook_cell,Jupyter cell wall time (HPO + final train)
+lipophilicity,random,2,gpu,GIN (3D),305.68,0.0849,5m 6s,notebook_cell,Jupyter cell wall time (HPO + final train)
+lipophilicity,random,2,gpu,SMILES LSTM,511.93,0.1422,8m 32s,notebook_cell,Jupyter cell wall time (HPO + final train)
+lipophilicity,random,2,gpu,SchNet (3D coords),418.29,0.1162,6m 58s,notebook_cell,Jupyter cell wall time (HPO + final train)
+lipophilicity,random,3,gpu,D-MPNN (2D),124408.0,34.5578,34h 33m 28s,notebook_cell,Jupyter cell wall time (HPO + final train)
+lipophilicity,random,3,gpu,GIN (2D),210.63,0.0585,3m 31s,notebook_cell,Jupyter cell wall time (HPO + final train)
+lipophilicity,random,3,gpu,GIN (3D),245.56,0.0682,4m 6s,notebook_cell,Jupyter cell wall time (HPO + final train)
+lipophilicity,random,3,gpu,SMILES LSTM,554.31,0.154,9m 14s,notebook_cell,Jupyter cell wall time (HPO + final train)
+lipophilicity,random,3,gpu,SchNet (3D coords),305.58,0.0849,5m 6s,notebook_cell,Jupyter cell wall time (HPO + final train)
+lipophilicity,random,4,gpu,D-MPNN (2D),133366.73,37.0463,37h 2m 47s,notebook_cell,Jupyter cell wall time (HPO + final train)
+lipophilicity,random,4,gpu,GIN (2D),223.83,0.0622,3m 44s,notebook_cell,Jupyter cell wall time (HPO + final train)
+lipophilicity,random,4,gpu,GIN (3D),217.03,0.0603,3m 37s,notebook_cell,Jupyter cell wall time (HPO + final train)
+lipophilicity,random,4,gpu,SMILES LSTM,458.18,0.1273,7m 38s,notebook_cell,Jupyter cell wall time (HPO + final train)
+lipophilicity,random,4,gpu,SchNet (3D coords),394.17,0.1095,6m 34s,notebook_cell,Jupyter cell wall time (HPO + final train)
+lipophilicity,scaffold,0,gpu,D-MPNN (2D),75195.0,20.8875,20h 53m 15s,history_mtime,approx from history file mtime deltas
+lipophilicity,scaffold,0,gpu,GIN (3D),2867.0,0.7964,47m 47s,history_mtime,approx from history file mtime deltas
+lipophilicity,scaffold,0,gpu,SMILES LSTM,841.39,0.2337,14m 1s,notebook_cell,Jupyter cell wall time (HPO + final train)
+lipophilicity,scaffold,0,gpu,SchNet (3D coords),37417.0,10.3936,10h 23m 37s,history_mtime,approx from history file mtime deltas
+lipophilicity,scaffold,1,gpu,D-MPNN (2D),83081.0,23.0781,23h 4m 41s,history_mtime,approx from history file mtime deltas
+lipophilicity,scaffold,1,gpu,GIN (3D),2907.0,0.8075,48m 27s,history_mtime,approx from history file mtime deltas
+lipophilicity,scaffold,1,gpu,SMILES LSTM,747.55,0.2077,12m 28s,notebook_cell,Jupyter cell wall time (HPO + final train)
+lipophilicity,scaffold,1,gpu,SchNet (3D coords),38543.0,10.7064,10h 42m 23s,history_mtime,approx from history file mtime deltas
+lipophilicity,scaffold,2,gpu,D-MPNN (2D),115531.12,32.092,32h 5m 31s,notebook_cell,Jupyter cell wall time (HPO + final train)
+lipophilicity,scaffold,2,gpu,GIN (2D),336.0,0.0933,5m 36s,history_mtime,approx from history file mtime deltas (from SLURM job start; includes setup)
+lipophilicity,scaffold,2,gpu,GIN (3D),254.29,0.0706,4m 14s,notebook_cell,Jupyter cell wall time (HPO + final train)
+lipophilicity,scaffold,2,gpu,SMILES LSTM,710.03,0.1972,11m 50s,notebook_cell,Jupyter cell wall time (HPO + final train)
+lipophilicity,scaffold,2,gpu,SchNet (3D coords),384.31,0.1068,6m 24s,notebook_cell,Jupyter cell wall time (HPO + final train)
+lipophilicity,scaffold,3,gpu,D-MPNN (2D),132866.48,36.9074,36h 54m 26s,notebook_cell,Jupyter cell wall time (HPO + final train)
+lipophilicity,scaffold,3,gpu,GIN (2D),224.66,0.0624,3m 45s,notebook_cell,Jupyter cell wall time (HPO + final train)
+lipophilicity,scaffold,3,gpu,GIN (3D),284.37,0.079,4m 44s,notebook_cell,Jupyter cell wall time (HPO + final train)
+lipophilicity,scaffold,3,gpu,SMILES LSTM,703.48,0.1954,11m 43s,notebook_cell,Jupyter cell wall time (HPO + final train)
+lipophilicity,scaffold,3,gpu,SchNet (3D coords),360.36,0.1001,6m 0s,notebook_cell,Jupyter cell wall time (HPO + final train)
+lipophilicity,scaffold,4,gpu,D-MPNN (2D),128540.3,35.7056,35h 42m 20s,notebook_cell,Jupyter cell wall time (HPO + final train)
+lipophilicity,scaffold,4,gpu,GIN (2D),184.24,0.0512,3m 4s,notebook_cell,Jupyter cell wall time (HPO + final train)
+lipophilicity,scaffold,4,gpu,GIN (3D),218.45,0.0607,3m 38s,notebook_cell,Jupyter cell wall time (HPO + final train)
+lipophilicity,scaffold,4,gpu,SMILES LSTM,502.97,0.1397,8m 23s,notebook_cell,Jupyter cell wall time (HPO + final train)
+lipophilicity,scaffold,4,gpu,SchNet (3D coords),321.05,0.0892,5m 21s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,random,0,gpu,D-MPNN (2D),134134.65,37.2596,37h 15m 35s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,random,0,gpu,GIN (2D),211.82,0.0588,3m 32s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,random,0,gpu,GIN (3D),212.7,0.0591,3m 33s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,random,0,gpu,SMILES LSTM,1123.01,0.3119,18m 43s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,random,0,gpu,SchNet (3D coords),397.94,0.1105,6m 38s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,random,1,gpu,D-MPNN (2D),132779.86,36.8833,36h 52m 60s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,random,1,gpu,GIN (2D),266.27,0.074,4m 26s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,random,1,gpu,GIN (3D),324.95,0.0903,5m 25s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,random,1,gpu,SMILES LSTM,1695.01,0.4708,28m 15s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,random,1,gpu,SchNet (3D coords),445.05,0.1236,7m 25s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,random,2,gpu,D-MPNN (2D),151684.44,42.1346,42h 8m 4s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,random,2,gpu,GIN (2D),250.64,0.0696,4m 11s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,random,2,gpu,GIN (3D),245.5,0.0682,4m 6s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,random,2,gpu,SMILES LSTM,1212.49,0.3368,20m 12s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,random,2,gpu,SchNet (3D coords),342.55,0.0952,5m 43s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,random,3,cpu,Combined + XGBoost,4004.78,1.1124,1h 6m 45s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,random,3,cpu,Descriptors + RF,1242.53,0.3451,20m 43s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,random,3,cpu,Descriptors + SVM,257.82,0.0716,4m 18s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,random,3,cpu,Descriptors + XGBoost,1321.81,0.3672,22m 2s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,random,3,cpu,Morgan + RF,7084.25,1.9678,1h 58m 4s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,random,3,cpu,Morgan + SVM,5146.82,1.4297,1h 25m 47s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,random,3,cpu,Morgan + XGBoost,3426.88,0.9519,57m 7s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,random,3,gpu,D-MPNN (2D),140568.49,39.0468,39h 2m 48s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,random,3,gpu,GIN (2D),275.28,0.0765,4m 35s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,random,3,gpu,GIN (3D),252.92,0.0703,4m 13s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,random,3,gpu,SMILES LSTM,1101.52,0.306,18m 22s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,random,3,gpu,SchNet (3D coords),376.66,0.1046,6m 17s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,random,4,cpu,Combined + XGBoost,4908.6,1.3635,1h 21m 49s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,random,4,cpu,Descriptors + RF,1287.64,0.3577,21m 28s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,random,4,cpu,Descriptors + SVM,224.75,0.0624,3m 45s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,random,4,cpu,Descriptors + XGBoost,1337.85,0.3716,22m 18s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,random,4,cpu,Morgan + RF,4551.61,1.2643,1h 15m 52s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,random,4,cpu,Morgan + SVM,6387.59,1.7743,1h 46m 28s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,random,4,cpu,Morgan + XGBoost,3037.89,0.8439,50m 38s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,random,4,gpu,D-MPNN (2D),154824.23,43.0067,43h 0m 24s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,random,4,gpu,GIN (2D),261.36,0.0726,4m 21s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,random,4,gpu,GIN (3D),268.82,0.0747,4m 29s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,random,4,gpu,SMILES LSTM,1018.56,0.2829,16m 59s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,random,4,gpu,SchNet (3D coords),421.47,0.1171,7m 1s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,scaffold,0,gpu,D-MPNN (2D),85696.0,23.8044,23h 48m 16s,history_mtime,approx from history file mtime deltas
+tox21,scaffold,0,gpu,GIN (3D),4084.0,1.1344,1h 8m 4s,history_mtime,approx from history file mtime deltas
+tox21,scaffold,0,gpu,SMILES LSTM,110497.0,30.6936,30h 41m 37s,history_mtime,approx from history file mtime deltas
+tox21,scaffold,0,gpu,SchNet (3D coords),37267.0,10.3519,10h 21m 7s,history_mtime,approx from history file mtime deltas
+tox21,scaffold,1,gpu,D-MPNN (2D),57175.0,15.8819,15h 52m 55s,history_mtime,approx from history file mtime deltas
+tox21,scaffold,1,gpu,GIN (3D),2540.0,0.7056,42m 20s,history_mtime,approx from history file mtime deltas
+tox21,scaffold,1,gpu,SMILES LSTM,1259.92,0.35,20m 60s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,scaffold,1,gpu,SchNet (3D coords),40966.0,11.3794,11h 22m 46s,history_mtime,approx from history file mtime deltas
+tox21,scaffold,2,gpu,D-MPNN (2D),99687.74,27.691,27h 41m 28s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,scaffold,2,gpu,GIN (2D),207.61,0.0577,3m 28s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,scaffold,2,gpu,GIN (3D),269.54,0.0749,4m 30s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,scaffold,2,gpu,SMILES LSTM,1325.09,0.3681,22m 5s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,scaffold,2,gpu,SchNet (3D coords),358.61,0.0996,5m 59s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,scaffold,3,gpu,D-MPNN (2D),109700.98,30.4725,30h 28m 21s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,scaffold,3,gpu,GIN (2D),247.09,0.0686,4m 7s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,scaffold,3,gpu,GIN (3D),335.53,0.0932,5m 36s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,scaffold,3,gpu,SMILES LSTM,967.7,0.2688,16m 8s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,scaffold,3,gpu,SchNet (3D coords),406.87,0.113,6m 47s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,scaffold,4,gpu,D-MPNN (2D),117946.08,32.7628,32h 45m 46s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,scaffold,4,gpu,GIN (2D),273.84,0.0761,4m 34s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,scaffold,4,gpu,GIN (3D),263.86,0.0733,4m 24s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,scaffold,4,gpu,SMILES LSTM,966.73,0.2685,16m 7s,notebook_cell,Jupyter cell wall time (HPO + final train)
+tox21,scaffold,4,gpu,SchNet (3D coords),394.08,0.1095,6m 34s,notebook_cell,Jupyter cell wall time (HPO + final train)

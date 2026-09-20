@@ -1,0 +1,41 @@
+dataset,model,device,n_runs,mean_time,mean_hours,std_seconds,min_time,max_time,source
+esol,GIN (2D),gpu,3,2m 22s,0.039,19.3,2m 3s,2m 42s,notebook wall time
+esol,D-MPNN (2D),gpu,3,6h 4m 44s,6.079,2917.7,5h 22m 39s,6h 57m 58s,notebook wall time
+esol,GIN (3D),gpu,3,2m 53s,0.048,27.8,2m 25s,3m 20s,notebook wall time
+esol,SchNet (3D coords),gpu,3,4m 36s,0.077,30.0,4m 1s,4m 57s,notebook wall time
+esol,SMILES LSTM,gpu,3,3m 11s,0.053,36.7,2m 40s,3m 51s,notebook wall time
+freesolv,GIN (2D),gpu,3,54.0s,0.015,4.1,49.6s,57.6s,notebook wall time
+freesolv,D-MPNN (2D),gpu,3,1h 47m 19s,1.789,179.3,1h 44m 52s,1h 50m 39s,notebook wall time
+freesolv,GIN (3D),gpu,3,1m 41s,0.028,10.1,1m 30s,1m 50s,notebook wall time
+freesolv,SchNet (3D coords),gpu,3,2m 43s,0.045,20.3,2m 23s,3m 4s,notebook wall time
+freesolv,SMILES LSTM,gpu,3,1m 60s,0.033,20.0,1m 38s,2m 18s,notebook wall time
+lipophilicity,GIN (2D),gpu,2,3m 24s,0.057,28.6,3m 4s,3m 45s,notebook wall time
+lipophilicity,D-MPNN (2D),gpu,3,34h 54m 6s,34.902,9022.8,32h 5m 31s,36h 54m 26s,notebook wall time
+lipophilicity,GIN (3D),gpu,3,4m 12s,0.07,33.0,3m 38s,4m 44s,notebook wall time
+lipophilicity,SchNet (3D coords),gpu,3,5m 55s,0.099,31.9,5m 21s,6m 24s,notebook wall time
+lipophilicity,SMILES LSTM,gpu,5,11m 41s,0.195,123.7,8m 23s,14m 1s,notebook wall time
+bace,D-MPNN (2D),gpu,5,20h 32m 54s,20.548,16552.9,12h 34m 52s,24h 24m 29s,approx (file timestamps)
+bace,GIN (3D),gpu,5,2h 44m 38s,2.744,5358.4,1h 2m 50s,4h 21m 29s,approx (file timestamps)
+bace,SchNet (3D coords),gpu,5,10h 55m 39s,10.928,24562.2,6h 23m 37s,22h 52m 2s,approx (file timestamps)
+bace,SMILES LSTM,gpu,5,7h 47m 52s,7.798,7200.6,5h 34m 16s,10h 9m 25s,approx (file timestamps)
+bbbp,D-MPNN (2D),gpu,5,14h 8m 17s,14.138,4840.8,12h 35m 36s,15h 46m 54s,approx (file timestamps)
+bbbp,GIN (3D),gpu,5,25m 54s,0.432,353.4,18m 45s,34m 49s,approx (file timestamps)
+bbbp,SchNet (3D coords),gpu,5,4h 43m 42s,4.728,3556.1,3h 11m 56s,5h 44m 36s,approx (file timestamps)
+bbbp,SMILES LSTM,gpu,5,14h 39m 20s,14.655,16797.8,9h 20m 50s,21h 48m 20s,approx (file timestamps)
+tox21,GIN (2D),gpu,3,4m 3s,0.068,33.3,3m 28s,4m 34s,notebook wall time
+tox21,D-MPNN (2D),gpu,3,30h 18m 32s,30.309,9143.4,27h 41m 28s,32h 45m 46s,notebook wall time
+tox21,GIN (3D),gpu,3,4m 50s,0.08,39.8,4m 24s,5m 36s,notebook wall time
+tox21,SchNet (3D coords),gpu,3,6m 27s,0.107,25.0,5m 59s,6m 47s,notebook wall time
+tox21,SMILES LSTM,gpu,4,18m 50s,0.314,189.7,16m 7s,22m 5s,notebook wall time
+hiv,Morgan + RF,cpu,2,1h 21m 30s,1.358,697.9,1h 13m 16s,1h 29m 43s,notebook wall time
+hiv,Morgan + SVM,cpu,2,28m 12s,0.47,970.7,16m 45s,39m 38s,notebook wall time
+hiv,Morgan + XGBoost,cpu,2,14m 9s,0.236,37.8,13m 42s,14m 36s,notebook wall time
+hiv,Descriptors + RF,cpu,2,13m 2s,0.217,116.1,11m 40s,14m 24s,notebook wall time
+hiv,Descriptors + SVM,cpu,2,1m 50s,0.03,4.0,1m 47s,1m 53s,notebook wall time
+hiv,Descriptors + XGBoost,cpu,2,3m 58s,0.066,22.9,3m 42s,4m 14s,notebook wall time
+hiv,Combined + XGBoost,cpu,2,17m 48s,0.297,72.0,16m 57s,18m 39s,notebook wall time
+hiv,GIN (2D),gpu,3,11m 16s,0.188,131.7,9m 35s,13m 45s,approx (file timestamps)
+hiv,D-MPNN (2D),gpu,2,97h 32m 14s,97.537,15140.0,94h 33m 49s,100h 30m 40s,notebook wall time
+hiv,GIN (3D),gpu,2,9m 4s,0.151,16.4,8m 52s,9m 15s,notebook wall time
+hiv,SchNet (3D coords),gpu,4,15m 43s,0.262,151.9,13m 21s,18m 10s,notebook wall time
+hiv,SMILES LSTM,gpu,3,38m 26s,0.641,470.7,29m 33s,44m 25s,notebook wall time

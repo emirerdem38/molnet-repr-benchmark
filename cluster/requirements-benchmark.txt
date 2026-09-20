@@ -1,0 +1,29 @@
+# Benchmark v5 — core deps for CPU + GPU notebooks (multi-seed included)
+# Prefer:  pip install -r cluster/requirements-benchmark.txt
+#
+# Notes:
+# - NumPy 2.x is REQUIRED by scipy 1.18 / scikit-learn 1.9; RDKit 2026 supports it.
+#   (Do NOT pin numpy<2 — that causes "module 'numpy' has no attribute 'long'".)
+# - For CUDA PyTorch on RWTH, use cluster/install_cuda_torch.sh after this,
+#   or install torch from the official CUDA wheel index.
+# - SchNet needs torch-cluster (often installed via install_pyg_extensions.sh).
+
+numpy>=2.0
+pandas
+pytz
+python-dateutil
+scipy
+scikit-learn
+xgboost
+rdkit
+tqdm
+matplotlib
+seaborn
+optuna
+papermill
+ipykernel
+jupyter
+torch
+torchvision
+torchaudio
+torch-geometric

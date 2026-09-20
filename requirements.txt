@@ -1,0 +1,29 @@
+# Benchmark v5 environment (Python 3.12).
+# Versions mirror the working macOS/Apple-Silicon env (benchmark_v4/.venv).
+# NOTE: torch / torch-geometric / rdkit ship platform-specific wheels. On a GPU
+# machine install the CUDA build of torch FIRST (see https://pytorch.org), then
+# `pip install -r requirements.txt` for the rest.
+
+# --- core scientific stack ---
+numpy==2.5.1
+scipy==1.18.0
+pandas==3.0.3
+scikit-learn==1.9.0
+matplotlib==3.11.0
+
+# --- chemistry / models ---
+rdkit==2026.3.3
+torch==2.13.0
+torch-geometric==2.8.0
+# SchNet: PyG 2.6+ needs pyg-lib (or torch-cluster fallback in mol_repr_utils).
+# After pip install -r requirements.txt, run:
+#   bash cluster/install_pyg_extensions.sh
+# On Mac CPU-only, see cluster/setup_mac_env.sh.
+xgboost            # not pinned (was not in the sampled venv); latest is fine
+optuna==4.9.0
+
+# --- notebook execution / kernel ---
+ipykernel==7.3.0
+jupyter-client==8.9.1
+papermill          # required by run.sh for headless execution
+tqdm==4.68.4

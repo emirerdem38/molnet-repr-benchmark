@@ -1,0 +1,50 @@
+dataset,model,device,n_runs,mean_time,mean_hours,std_seconds,min_time,max_time,source
+esol,GIN (2D),gpu,5,2m 28s,0.041,16.5,2m 15s,2m 55s,notebook wall time
+esol,D-MPNN (2D),gpu,5,7h 4m 21s,7.072,5053.7,4h 49m 23s,8h 37m 47s,notebook wall time
+esol,GIN (3D),gpu,5,2m 33s,0.042,33.7,1m 54s,3m 9s,notebook wall time
+esol,SchNet (3D coords),gpu,5,4m 12s,0.07,55.8,2m 48s,5m 15s,notebook wall time
+esol,SMILES LSTM,gpu,5,4m 13s,0.07,33.4,3m 34s,4m 50s,notebook wall time
+freesolv,GIN (2D),gpu,5,1m 15s,0.021,5.6,1m 7s,1m 21s,notebook wall time
+freesolv,D-MPNN (2D),gpu,5,2h 2m 37s,2.043,705.3,1h 44m 19s,2h 16m 42s,notebook wall time
+freesolv,GIN (3D),gpu,5,1m 29s,0.025,18.9,1m 9s,1m 58s,notebook wall time
+freesolv,SchNet (3D coords),gpu,5,2m 14s,0.037,15.8,2m 1s,2m 39s,notebook wall time
+freesolv,SMILES LSTM,gpu,5,2m 1s,0.034,12.0,1m 46s,2m 12s,notebook wall time
+lipophilicity,GIN (2D),gpu,5,3m 48s,0.063,24.5,3m 28s,4m 29s,notebook wall time
+lipophilicity,D-MPNN (2D),gpu,5,36h 21m 1s,36.35,10016.2,34h 16m 49s,40h 55m 51s,notebook wall time
+lipophilicity,GIN (3D),gpu,5,4m 14s,0.07,34.9,3m 37s,5m 6s,notebook wall time
+lipophilicity,SchNet (3D coords),gpu,5,6m 13s,0.104,43.3,5m 6s,6m 58s,notebook wall time
+lipophilicity,SMILES LSTM,gpu,5,10m 36s,0.177,178.6,7m 38s,13m 52s,notebook wall time
+bace,GIN (2D),gpu,5,3m 56s,0.066,21.4,3m 23s,4m 16s,notebook wall time
+bace,D-MPNN (2D),gpu,5,28h 10m 50s,28.181,20624.1,21h 20m 54s,36h 4m 21s,notebook wall time
+bace,GIN (3D),gpu,5,4m 39s,0.077,34.3,4m 2s,5m 24s,notebook wall time
+bace,SchNet (3D coords),gpu,5,6m 1s,0.1,40.6,5m 1s,6m 50s,notebook wall time
+bace,SMILES LSTM,gpu,5,9m 6s,0.152,74.6,7m 19s,10m 28s,notebook wall time
+bbbp,GIN (2D),gpu,5,3m 48s,0.063,35.6,3m 5s,4m 36s,notebook wall time
+bbbp,D-MPNN (2D),gpu,5,21h 52m 24s,21.873,8130.8,19h 39m 28s,25h 8m 15s,notebook wall time
+bbbp,GIN (3D),gpu,5,4m 52s,0.081,72.3,3m 44s,6m 44s,notebook wall time
+bbbp,SchNet (3D coords),gpu,5,6m 23s,0.106,68.3,5m 2s,8m 3s,notebook wall time
+bbbp,SMILES LSTM,gpu,5,16m 48s,0.28,302.2,11m 28s,23m 41s,notebook wall time
+tox21,Morgan + RF,cpu,2,1h 36m 58s,1.616,1790.8,1h 15m 52s,1h 58m 4s,notebook wall time
+tox21,Morgan + SVM,cpu,2,1h 36m 7s,1.602,877.4,1h 25m 47s,1h 46m 28s,notebook wall time
+tox21,Morgan + XGBoost,cpu,2,53m 52s,0.898,275.1,50m 38s,57m 7s,notebook wall time
+tox21,Descriptors + RF,cpu,2,21m 5s,0.351,31.9,20m 43s,21m 28s,notebook wall time
+tox21,Descriptors + SVM,cpu,2,4m 1s,0.067,23.4,3m 45s,4m 18s,notebook wall time
+tox21,Descriptors + XGBoost,cpu,2,22m 10s,0.369,11.3,22m 2s,22m 18s,notebook wall time
+tox21,Combined + XGBoost,cpu,2,1h 14m 17s,1.238,639.1,1h 6m 45s,1h 21m 49s,notebook wall time
+tox21,GIN (2D),gpu,5,4m 13s,0.07,24.7,3m 32s,4m 35s,notebook wall time
+tox21,D-MPNN (2D),gpu,5,39h 39m 58s,39.666,10049.7,36h 52m 60s,43h 0m 24s,notebook wall time
+tox21,GIN (3D),gpu,5,4m 21s,0.072,41.2,3m 33s,5m 25s,notebook wall time
+tox21,SchNet (3D coords),gpu,5,6m 37s,0.11,39.6,5m 43s,7m 25s,notebook wall time
+tox21,SMILES LSTM,gpu,5,20m 30s,0.342,268.9,16m 59s,28m 15s,notebook wall time
+hiv,Morgan + RF,cpu,2,1h 15m 9s,1.253,296.4,1h 11m 40s,1h 18m 39s,notebook wall time
+hiv,Morgan + SVM,cpu,2,39m 20s,0.655,886.8,28m 52s,49m 47s,notebook wall time
+hiv,Morgan + XGBoost,cpu,2,15m 42s,0.262,91.0,14m 38s,16m 46s,notebook wall time
+hiv,Descriptors + RF,cpu,2,13m 8s,0.219,57.6,12m 28s,13m 49s,notebook wall time
+hiv,Descriptors + SVM,cpu,2,2m 20s,0.039,26.0,2m 2s,2m 39s,notebook wall time
+hiv,Descriptors + XGBoost,cpu,2,3m 54s,0.065,4.9,3m 51s,3m 58s,notebook wall time
+hiv,Combined + XGBoost,cpu,2,18m 39s,0.311,141.3,16m 59s,20m 19s,notebook wall time
+hiv,GIN (2D),gpu,5,5h 42m 43s,5.712,27060.1,14m 28s,14h 57m 17s,approx (file timestamps)
+hiv,D-MPNN (2D),gpu,2,110h 37m 41s,110.628,5411.1,109h 33m 55s,111h 41m 27s,notebook wall time
+hiv,GIN (3D),gpu,2,11m 2s,0.184,34.0,10m 38s,11m 26s,notebook wall time
+hiv,SchNet (3D coords),gpu,2,18m 34s,0.31,13.8,18m 25s,18m 44s,notebook wall time
+hiv,SMILES LSTM,gpu,3,38m 29s,0.641,446.4,30m 11s,44m 35s,notebook wall time
