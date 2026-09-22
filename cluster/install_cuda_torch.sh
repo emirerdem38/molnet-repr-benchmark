@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # Install CUDA PyTorch into the benchmark v4 venv (required for GPU SLURM jobs).
-# Conformer setup uses CPU-only torch — run this before submit_gpu.sh.
+# Conformer setup uses CPU-only torch: run this before submit_gpu.sh.
 #
-# From benchmark_v4/:
+# From the repository root/:
 #   bash cluster/install_cuda_torch.sh
 
 set -euo pipefail
@@ -34,7 +34,7 @@ if torch.cuda.is_available():
     print("GPU:", torch.cuda.get_device_name(0))
 else:
     raise SystemExit(
-        "CUDA still not available — load a CUDA module (module avail CUDA) and retry, "
+        "CUDA still not available: load a CUDA module (module avail CUDA) and retry, "
         "or ask RWTH support for the correct PyTorch module on c23g."
     )
 PY

@@ -1,5 +1,5 @@
 #!/usr/local_rwth/bin/zsh
-#SBATCH --account=thesXXXX
+#SBATCH --account=ACCOUNT_ID
 #SBATCH --partition=c23ms
 #SBATCH --job-name=v5-cpu
 #SBATCH --cpus-per-task=8
@@ -8,10 +8,10 @@
 #SBATCH --ntasks=1
 #SBATCH --output=cluster/logs/%x_%j.out
 #SBATCH --error=cluster/logs/%x_%j.err
-#SBATCH --mail-user=emir.erdem@rwth-aachen.de
+#SBATCH --mail-user=name@example.com
 #SBATCH --mail-type=END,FAIL
 #
-# Benchmark v5 — CPU track (tabular models) for one dataset / seed / split mode.
+# Benchmark v5: CPU track (tabular models) for one dataset / seed / split mode.
 #
 # Preferred: submit via the wrapper (fills --account/--partition from rwth_config.sh):
 #   bash cluster/submit.sh --device cpu --seed 0 --mode scaffold esol
@@ -58,7 +58,7 @@ NOTEBOOK="notebooks/seed_${SEED}/${MODE}/cpu/benchmark_cpu_${DATASET}.ipynb"
 OUTPUT="${RESULTS_ROOT}/cpu/${DATASET}_executed.ipynb"
 
 echo "============================================================"
-echo "Benchmark v5 CPU — dataset=${DATASET} seed=${SEED} mode=${MODE}"
+echo "Benchmark v5 CPU: dataset=${DATASET} seed=${SEED} mode=${MODE}"
 echo "Host      : $(hostname)"
 echo "Start     : $(date -Iseconds)"
 echo "Notebook  : ${NOTEBOOK}"

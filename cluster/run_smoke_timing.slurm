@@ -1,5 +1,5 @@
 #!/usr/local_rwth/bin/zsh
-#SBATCH --account=rwth2175
+#SBATCH --account=ACCOUNT_ID
 #SBATCH --partition=c23g
 #SBATCH --job-name=v5-smoke-timing
 #SBATCH --cpus-per-task=8
@@ -9,7 +9,7 @@
 #SBATCH --gres=gpu:1
 #SBATCH --output=cluster/logs/%x_%j.out
 #SBATCH --error=cluster/logs/%x_%j.err
-#SBATCH --mail-user=emir.erdem@rwth-aachen.de
+#SBATCH --mail-user=name@example.com
 #SBATCH --mail-type=END,FAIL
 #
 # Same-machine smoke timing for all 12 models on FreeSolv (reduced HPO).
@@ -32,7 +32,7 @@ export OPENBLAS_NUM_THREADS="${SLURM_CPUS_PER_TASK:-8}"
 export PYTHONUNBUFFERED=1
 
 echo "============================================================"
-echo "Smoke timing — dataset=${DATASET} seed=${SEED} mode=${MODE}"
+echo "Smoke timing: dataset=${DATASET} seed=${SEED} mode=${MODE}"
 echo "Host      : $(hostname)"
 echo "Start     : $(date -Iseconds)"
 echo "Job ID    : ${SLURM_JOB_ID:-n/a}"

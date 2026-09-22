@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# One-time cluster setup for benchmark v5 (conformers + GPU runs).
-# Run from benchmark_v5/ on the cluster:
+# One-time cluster setup for the benchmark (conformers + GPU runs).
+# Run from the repository root on the cluster:
 #   bash cluster/setup_cluster_env.sh
 #   # or into an in-folder venv:  VENV_DIR=./.venv bash cluster/setup_cluster_env.sh
 
@@ -8,23 +8,23 @@ set -euo pipefail
 
 cd "$(dirname "$0")/.."
 ROOT="$(pwd)"
-echo "Benchmark v4 root: $ROOT"
+echo "Repository root: $ROOT"
 
-# RWTH: use a recent Python if available (optional).
+# Optional: load a recent Python module if the site provides one.
 if command -v module &>/dev/null; then
   module load Python/3.11.3-GCCcore-12.3.0 2>/dev/null || \
   module load Python/3.10 2>/dev/null || true
 fi
 
-# Prefer venv next to benchmark_v4 (molnet_esol_project/.venv)
-VENV_DIR="${VENV_DIR:-$ROOT/../.venv}"
+# Default: venv inside the repository (override with VENV_DIR=...)
+VENV_DIR="${VENV_DIR:-$ROOT/.venv}"
 
 if [[ ! -f "$VENV_DIR/bin/activate" ]]; then
   echo "Creating venv at $VENV_DIR ..."
   python3 -m venv "$VENV_DIR"
 else
   echo "Using existing venv at $VENV_DIR"
-  echo "(If this was copied from a Mac, delete it and rerun: rm -rf \"$VENV_DIR\")"
+  echo "(If this venv was copied from another OS, delete it and rerun: rm -rf \"$VENV_DIR\")"
 fi
 
 # shellcheck disable=SC1091

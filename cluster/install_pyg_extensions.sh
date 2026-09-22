@@ -2,10 +2,10 @@
 # PyG extensions for SchNet (radius_graph).
 #
 # PyG 2.6+ needs pyg-lib>=0.6.0. torch-scatter/sparse/cluster are optional
-# (often no prebuilt Mac wheels for every torch build — SchNet does not need them
+# (often no prebuilt Mac wheels for every torch build: SchNet does not need them
 # if pyg-lib is installed).
 #
-# Run from benchmark_v5/ (after torch is in the venv):
+# Run from the repository root (after torch is in the venv):
 #   bash cluster/install_pyg_extensions.sh
 # On RWTH GPU nodes, run after install_cuda_torch.sh.
 
@@ -48,7 +48,7 @@ python -m pip install --upgrade pip
 echo "Installing pyg-lib (required for SchNet) ..."
 python -m pip install pyg-lib -f "${WHEEL_URL}"
 
-# ── Optional extras (skip if no prebuilt wheel — avoids source builds on Mac) ─
+# ── Optional extras (skip if no prebuilt wheel: avoids source builds on Mac) ─
 for pkg in torch-scatter torch-sparse torch-cluster; do
   echo "Optional: ${pkg} ..."
   if python -m pip install "${pkg}" -f "${WHEEL_URL}" --only-binary=:all: 2>/dev/null; then
@@ -59,7 +59,7 @@ for pkg in torch-scatter torch-sparse torch-cluster; do
 done
 
 # NumPy must stay 2.x (scipy 1.18 / scikit-learn 1.9 require it; RDKit 2026 is fine).
-# Do NOT downgrade numpy here — a --no-deps downgrade leaves scipy expecting numpy 2
+# Do NOT downgrade numpy here: a --no-deps downgrade leaves scipy expecting numpy 2
 # and breaks imports with "module 'numpy' has no attribute 'long'".
 python -c "import numpy; assert numpy.__version__.startswith('2.'), \
   f'numpy {numpy.__version__} is too old; run: bash cluster/fix_numpy_rdkit.sh'"
@@ -71,12 +71,12 @@ from mol_repr_utils import build_schnet
 
 print("torch", torch.__version__)
 if pyg_typing.WITH_RADIUS:
-    print("pyg-lib OK — PyG radius_graph")
+    print("pyg-lib OK: PyG radius_graph")
 elif pyg_typing.WITH_PYG_LIB:
-    print("pyg-lib imported but radius op missing — check pyg-lib version")
+    print("pyg-lib imported but radius op missing: check pyg-lib version")
 else:
     from torch_cluster import radius_graph  # noqa: F401
-    print("torch-cluster OK — SchNet fallback radius graph")
+    print("torch-cluster OK: SchNet fallback radius graph")
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 z = torch.tensor([6, 6, 8], dtype=torch.long, device=device)

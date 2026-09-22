@@ -1,15 +1,18 @@
-# RWTH SLURM settings — edit once after uploading to the cluster.
+# RWTH SLURM settings. Edit before submitting jobs.
 #
-# Find your thesis account (starts with thes…):
+# Look up available accounts, for example:
 #   sacctmgr show user $USER format=account%30
 #   sshare -u $USER
 #
 # submit_*.sh scripts source this file and pass --account to sbatch.
 
-export RWTH_ACCOUNT="${RWTH_ACCOUNT:-rwth2175}"   # Small project (was thes2279)
-export RWTH_MAIL_USER="${RWTH_MAIL_USER:-emir.erdem@rwth-aachen.de}"
+# Required: computing account ID (no default; set explicitly).
+export RWTH_ACCOUNT="${RWTH_ACCOUNT:-}"
 
-# CPU-only jobs (conformer generation)
+# Optional: email for SLURM END/FAIL notifications.
+export RWTH_MAIL_USER="${RWTH_MAIL_USER:-}"
+
+# CPU-only jobs (for example conformer generation)
 export RWTH_PARTITION_CPU="${RWTH_PARTITION_CPU:-c23ms}"
 
 # GPU jobs (benchmark notebooks)

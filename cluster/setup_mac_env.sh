@@ -1,18 +1,18 @@
 #!/usr/bin/env bash
-# One-time Mac (Apple Silicon) setup for benchmark v4 GPU/CPU notebooks.
+# One-time local setup for Apple Silicon (Homebrew Python).
 #
-# Usage (from benchmark_v4/):
+# Usage (from the repository root):
 #   bash cluster/setup_mac_env.sh
 #
-# Creates the venv with Python 3.12, NumPy 2.x, RDKit, PyTorch (CPU/MPS), PyG.
+# Creates a venv with Python 3.11/3.12, NumPy 2.x, RDKit, PyTorch (CPU/MPS), PyG.
 
 set -euo pipefail
 
 cd "$(dirname "$0")/.."
 ROOT="$(pwd)"
-VENV_DIR="${VENV_DIR:-$ROOT/../.venv}"
+VENV_DIR="${VENV_DIR:-$ROOT/.venv}"
 
-echo "Benchmark v4 root: $ROOT"
+echo "Repository root: $ROOT"
 echo "Target venv    : $VENV_DIR"
 
 # Python 3.12 + NumPy 2.x is the tested combo (RDKit 2026 supports NumPy 2;
@@ -124,7 +124,7 @@ echo "  cd \"$ROOT\""
 echo "  source \"$VENV_DIR/bin/activate\""
 echo "  export PYTHONNOUSERSITE=1"
 echo ""
-echo "Run a GPU notebook (from benchmark_v4/):"
+echo "Run a GPU notebook (from the repository root/):"
 echo "  jupyter notebook notebooks/gpu/benchmark_gpu_bbbp.ipynb"
 echo ""
 echo "Or papermill:"

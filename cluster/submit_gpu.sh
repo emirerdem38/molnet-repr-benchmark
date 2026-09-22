@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 # Submit a single GPU benchmark job.
 #
-# Usage (from benchmark_v4/):
+# Usage (from the repository root):
 #   bash cluster/submit_gpu.sh esol
 #   bash cluster/submit_gpu.sh hiv 48:00:00 64G
 #
-# CLAIX max walltime is 48:00:00 — resubmit the same command to continue from
+# CLAIX max walltime is often 48:00:00; resubmit the same command to continue from
 # results/gpu/<dataset>_partial.json (FRESH_RUN=False in the notebook).
 #
 # Args: DATASET [TIME] [MEM]
@@ -40,11 +40,10 @@ esac
 TIME="${TIME:-$DEFAULT_TIME}"
 MEM="${MEM:-$DEFAULT_MEM}"
 
-if [[ "$RWTH_ACCOUNT" == "thesXXXX" ]]; then
-  echo "WARNING: Set your thesis account in cluster/rwth_config.sh (RWTH_ACCOUNT=thes1234)"
-  echo "         Or: export RWTH_ACCOUNT=thes1234 before submitting"
-  echo "         Find it: sacctmgr show user \$USER format=account%30"
-  echo ""
+if [[ -z "${RWTH_ACCOUNT:-}" ]]; then
+  echo "ERROR: Set RWTH_ACCOUNT in cluster/rwth_config.sh or export RWTH_ACCOUNT=ACCOUNT_ID"
+  echo "       List accounts: sacctmgr show user \$USER format=account%30"
+  exit 1
 fi
 
 mkdir -p cluster/logs

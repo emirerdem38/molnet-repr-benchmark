@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# Submit GPU jobs for all 7 datasets (parallel — one job per dataset).
+# Submit GPU jobs for all 7 datasets (parallel: one job per dataset).
 #
-# Usage (from benchmark_v4/):
+# Usage (from the repository root/):
 #   bash cluster/submit_all_gpu.sh
 #
 # For sequential runs (one after another), use:

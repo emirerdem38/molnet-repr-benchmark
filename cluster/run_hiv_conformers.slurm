@@ -1,5 +1,5 @@
 #!/usr/local_rwth/bin/zsh
-#SBATCH --account=thesXXXX
+#SBATCH --account=ACCOUNT_ID
 #SBATCH --partition=c23ms
 #SBATCH --job-name=hiv-conf-v4
 #SBATCH --cpus-per-task=16
@@ -9,7 +9,7 @@
 #SBATCH --ntasks=1
 #SBATCH --output=cluster/logs/hiv_conformers_%j.out
 #SBATCH --error=cluster/logs/hiv_conformers_%j.err
-#SBATCH --mail-user=emir.erdem@rwth-aachen.de
+#SBATCH --mail-user=name@example.com
 #SBATCH --mail-type=END,FAIL
 
 # Single-job HIV conformer generation → data/hiv_conformers_n25.pkl
@@ -24,7 +24,7 @@ source cluster/activate_env.sh
 export OMP_NUM_THREADS="${SLURM_CPUS_PER_TASK:-16}"
 export MKL_NUM_THREADS="${SLURM_CPUS_PER_TASK:-16}"
 
-echo "HIV conformers (single job) — $(date -Iseconds)"
+echo "HIV conformers (single job): $(date -Iseconds)"
 
 python conformer_generation.py \
   --dataset hiv \

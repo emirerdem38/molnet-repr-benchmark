@@ -29,7 +29,7 @@ export OPENBLAS_NUM_THREADS="${SLURM_CPUS_PER_TASK:-8}"
 export PYTHONUNBUFFERED=1
 
 echo "============================================================"
-echo "Lipophilicity subset CPU — mode=${MODE} seed=${SEED}"
+echo "Lipophilicity subset CPU: mode=${MODE} seed=${SEED}"
 echo "fractions=${FRACTIONS}"
 echo "Host      : $(hostname)"
 echo "Account   : ${SLURM_JOB_ACCOUNT:-n/a}"

@@ -1,6 +1,6 @@
 # MoleculeNet representation benchmark
 
-Code for the M.Sc. thesis comparing molecular representations on seven
+Code for an M.Sc. thesis comparing molecular representations on seven
 MoleculeNet datasets (ESOL, FreeSolv, Lipophilicity, BACE, BBBP, Tox21, HIV).
 
 Twelve setups are run under the same splits and HPO budget:
@@ -9,16 +9,16 @@ Twelve setups are run under the same splits and HPO budget:
 - GIN (2D / 3D), D-MPNN, SchNet, SMILES LSTM
 
 Scaffold splitting is the main protocol; random splits are included for comparison.
-Each configuration is repeated over seeds 0–4.
+Each configuration is repeated over seeds 0-4.
 
 ## Layout
 
 ```
 *.py, run.sh          shared code and runner
 notebooks/            per-seed CPU/GPU notebooks (regenerate with generate_notebooks.py)
-results/summary/      mean ± std tables used in the thesis
-data/                 put MoleculeNet CSVs / conformers here (see data/README.md)
-cluster/              optional SLURM helpers (RWTH-style)
+results/summary/      mean +/- std tables used in the thesis
+data/                 MoleculeNet CSVs / conformers (see data/README.md)
+cluster/              optional SLURM helpers (example: RWTH-style)
 ```
 
 ## Setup
@@ -29,13 +29,13 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-On a CUDA machine, install the matching PyTorch build first
+On a CUDA machine, install a matching PyTorch build first
 (https://pytorch.org), then the rest of `requirements.txt`.
-For SchNet / PyG extras on cluster or Mac, see `cluster/`.
+For SchNet / PyG extras on a cluster or a local machine, see `cluster/`.
 
 ## Run
 
-Generate notebooks (only if you change the generator or config):
+Generate notebooks (only if the generator or config changes):
 
 ```bash
 python generate_notebooks.py
@@ -67,8 +67,7 @@ python lipophilicity_subset_benchmark.py
 
 `results/summary/` holds the aggregated CSVs (and compute-time tables) that
 back the thesis numbers. Full per-seed HPO dumps, histories, and raw run folders
-are large and are not mirrored here; regenerate them with `run.sh` or ask if you
-need a specific artifact.
+are large and are not mirrored here; regenerate them with `run.sh`.
 
 ## Thesis
 

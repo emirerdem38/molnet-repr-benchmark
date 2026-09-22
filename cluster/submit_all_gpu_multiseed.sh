@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Submit multi-seed GPU jobs for all datasets × given seeds.
 #
-# Usage (from benchmark_v4/):
+# Usage (from the repository root/):
 #   bash cluster/submit_all_gpu_multiseed.sh
 #   bash cluster/submit_all_gpu_multiseed.sh 0 1 2 3
 #

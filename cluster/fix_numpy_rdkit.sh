@@ -18,7 +18,7 @@ if [[ -z "$VENV_DIR" ]]; then
 fi
 
 if [[ ! -f "$VENV_DIR/bin/activate" ]]; then
-  echo "ERROR: No venv at $VENV_DIR — run: bash cluster/setup_cluster_env.sh"
+  echo "ERROR: No venv at $VENV_DIR: run: bash cluster/setup_cluster_env.sh"
   exit 1
 fi
 
@@ -44,5 +44,5 @@ from rdkit.Chem import rdFingerprintGenerator
 import scipy, sklearn
 assert numpy.__version__.startswith('2.'), numpy.__version__
 print('numpy', numpy.__version__, '| scipy', scipy.__version__, '| sklearn', sklearn.__version__)
-print('RDKit OK — AllChem, Descriptors, rdFingerprintGenerator')
+print('RDKit OK: AllChem, Descriptors, rdFingerprintGenerator')
 "

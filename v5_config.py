@@ -1,13 +1,10 @@
 #!/usr/bin/env python3
-"""Benchmark v5 layout config.
+"""Paths and constants for the multi-seed MoleculeNet benchmark.
 
-v5 is a clean, flat multi-seed layout. Every seed is a first-class fresh run
-(no "primary vs extra" distinction like v4). Both split modes are generated:
+Notebooks and results live under:
 
-    notebooks/seed_{SEED}/{MODE}/{cpu,gpu}/benchmark_{cpu,gpu}_{dataset}.ipynb
-    results/seed_{SEED}/{MODE}/{cpu,gpu,combined,splits,...}
-
-with SEED in SEEDS and MODE in SPLIT_MODES.
+    notebooks/seed_{SEED}/{MODE}/{cpu,gpu}/...
+    results/seed_{SEED}/{MODE}/{cpu,gpu,combined,splits}/...
 """
 
 from __future__ import annotations
@@ -17,10 +14,7 @@ from typing import List
 
 ROOT = Path(__file__).resolve().parent
 
-# All five seeds are run fresh from the beginning with the fixed scaffold split.
 SEEDS: List[int] = [0, 1, 2, 3, 4]
-
-# Both split protocols are generated so scaffold-vs-random can be compared.
 SPLIT_MODES: List[str] = ["scaffold", "random"]
 
 DATASETS: List[str] = [

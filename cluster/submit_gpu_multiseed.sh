@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Submit one multi-seed GPU job.
 #
-# Usage (from benchmark_v4/):
+# Usage (from the repository root/):
 #   bash cluster/submit_gpu_multiseed.sh esol 0
 #   bash cluster/submit_gpu_multiseed.sh hiv 1 48:00:00 64G
 #

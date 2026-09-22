@@ -1,5 +1,5 @@
 #!/usr/local_rwth/bin/zsh
-#SBATCH --account=thesXXXX
+#SBATCH --account=ACCOUNT_ID
 #SBATCH --partition=c23ms
 #SBATCH --job-name=hiv-conf-v4
 #SBATCH --cpus-per-task=8
@@ -10,7 +10,7 @@
 #SBATCH --array=0-19
 #SBATCH --output=cluster/logs/hiv_conformers_%A_%a.out
 #SBATCH --error=cluster/logs/hiv_conformers_%A_%a.err
-#SBATCH --mail-user=emir.erdem@rwth-aachen.de
+#SBATCH --mail-user=name@example.com
 #SBATCH --mail-type=END,FAIL
 
 # Parallel HIV conformer generation (CPU only, no GPU needed).
@@ -45,7 +45,7 @@ if (( END > N_MOLECULES )); then
   END=$N_MOLECULES
 fi
 
-echo "HIV conformers — array task ${TASK_ID}  [${START}:${END}) of ${N_MOLECULES} valid"
+echo "HIV conformers: array task ${TASK_ID}  [${START}:${END}) of ${N_MOLECULES} valid"
 echo "Host: $(hostname)  |  $(date -Iseconds)"
 
 python conformer_generation.py \

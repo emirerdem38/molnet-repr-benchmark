@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Benchmark v5 — modular SLURM submitter.
+# Benchmark v5: modular SLURM submitter.
 #
 # Pick a device (cpu/gpu), split mode (scaffold/random), seed, and one or all
 # datasets. Reads cluster/rwth_config.sh for --account / --partition / --mail so
@@ -13,16 +13,16 @@
 #   bash cluster/submit.sh -d cpu -s 0 --all                  # mode defaults to scaffold
 #   bash cluster/submit.sh -d gpu -s 2 -m scaffold hiv --dry-run
 #   bash cluster/submit.sh -d gpu -s 1 -m random hiv --time 7-00:00:00 --mem 64G
-#   bash cluster/submit.sh -d gpu -s 2 -m random hiv --account rwth2003 --after-dmpnn --time 3-00:00:00
+#   bash cluster/submit.sh -d gpu -s 2 -m random hiv --account ACCOUNT_ID --after-dmpnn --time 3-00:00:00
 #
 # Flags:
 #   -d, --device   cpu | gpu                 (required)
 #   -s, --seed     0 | 1 | 2 | 3 | 4         (required)
 #   -m, --mode     scaffold | random         (default: scaffold)
 #   -a, --all      submit all datasets for that seed/mode/device
-#       --time     SLURM walltime (e.g. 7-00:00:00); rwth2175 max is 7 days
+#       --time     SLURM walltime (e.g. 7-00:00:00)
 #       --mem      SLURM memory (e.g. 64G)
-#       --account  override RWTH_ACCOUNT from rwth_config.sh (e.g. rwth2003)
+#       --account  override RWTH_ACCOUNT from rwth_config.sh
 #       --skip-models  pipe-separated model names to skip, e.g. 'GIN (2D)|D-MPNN (2D)'
 #       --after-dmpnn  shortcut: skip GIN (2D) and D-MPNN (2D); run GIN (3D)+SchNet+LSTM
 #       --dry-run  print the sbatch command(s) without submitting
@@ -30,7 +30,7 @@
 #
 # After uploading the folder to the cluster, do these once:
 #   1) bash cluster/setup_cluster_env.sh          # build the venv
-#   2) edit cluster/rwth_config.sh                # set RWTH_ACCOUNT=thes...
+#   2) edit cluster/rwth_config.sh                # set RWTH_ACCOUNT
 #   3) bash cluster/submit.sh -d cpu -s 0 -m scaffold --all
 
 set -euo pipefail
@@ -86,8 +86,8 @@ fi
 # --- cluster config --------------------------------------------------------
 CFG="cluster/rwth_config.sh"
 [[ -f "$CFG" ]] && source "$CFG"
-ACCOUNT="${ACCOUNT_OVERRIDE:-${RWTH_ACCOUNT:-thesXXXX}}"
-MAIL="${RWTH_MAIL_USER:-emir.erdem@rwth-aachen.de}"
+ACCOUNT="${ACCOUNT_OVERRIDE:-${RWTH_ACCOUNT:-}}"
+MAIL="${RWTH_MAIL_USER:-}"
 if [[ "$DEVICE" == "cpu" ]]; then
   PARTITION="${RWTH_PARTITION_CPU:-c23ms}"
   SLURM_FILE="cluster/run_cpu.slurm"
@@ -95,9 +95,12 @@ else
   PARTITION="${RWTH_PARTITION_GPU:-c23g}"
   SLURM_FILE="cluster/run_gpu.slurm"
 fi
-if [[ "$ACCOUNT" == "thesXXXX" ]]; then
-  echo "WARNING: RWTH_ACCOUNT is still the placeholder 'thesXXXX'."
-  echo "         Edit cluster/rwth_config.sh before real submission."
+if [[ -z "$ACCOUNT" ]]; then
+  echo "ERROR: Set RWTH_ACCOUNT in cluster/rwth_config.sh or pass --account ACCOUNT_ID"
+  exit 1
+fi
+if [[ -z "$MAIL" ]]; then
+  echo "WARNING: RWTH_MAIL_USER is empty; SLURM mail notifications may be skipped."
 fi
 
 mkdir -p cluster/logs

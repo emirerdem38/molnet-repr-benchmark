@@ -6,7 +6,7 @@
 #
 # Usage:
 #   bash cluster/submit_lipophilicity_subset.sh
-#   bash cluster/submit_lipophilicity_subset.sh --account thes2279
+#   bash cluster/submit_lipophilicity_subset.sh --account ACCOUNT_ID
 #   bash cluster/submit_lipophilicity_subset.sh --track cpu --modes scaffold
 #   bash cluster/submit_lipophilicity_subset.sh --dry-run
 #
@@ -43,8 +43,8 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
-if [[ -z "${ACCOUNT}" || "${ACCOUNT}" == "thesXXXX" || "${ACCOUNT}" == "rwthXXXX" ]]; then
-  echo "ERROR: Set a real account, e.g. --account thes2279"
+if [[ -z "${ACCOUNT}" ]]; then
+  echo "ERROR: Set RWTH_ACCOUNT in cluster/rwth_config.sh or pass --account ACCOUNT_ID"
   exit 1
 fi
 
@@ -68,7 +68,7 @@ submit_one() {
     part="${RWTH_PARTITION_CPU}"
     name="v5-lipo-sub-cpu-${mode}"
     if [[ $is_thesis_account -eq 1 ]]; then
-      # thes* cannot use c23ms — run tabular on a GPU node (CPU-only Python).
+      # thes* cannot use c23ms: run tabular on a GPU node (CPU-only Python).
       part="${RWTH_PARTITION_GPU}"
       extra_args+=(--gres=gpu:1)
     fi

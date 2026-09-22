@@ -45,7 +45,7 @@ for ds in "${DATASETS[@]}"; do
   out_dir="results/seed_${SEED}/${MODE}/${DEVICE}"
   out="${out_dir}/${ds}_executed.ipynb"
   if [[ ! -f "$nb" ]]; then
-    echo "Missing $nb — run: python generate_notebooks.py --seeds ${SEED} --modes ${MODE}"
+    echo "Missing $nb: run: python generate_notebooks.py --seeds ${SEED} --modes ${MODE}"
     exit 1
   fi
   mkdir -p "$out_dir"

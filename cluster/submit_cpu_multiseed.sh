@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Submit one multi-seed CPU notebook job (tabular models + scaffold split).
 #
-# Usage (from benchmark_v4/):
+# Usage (from the repository root/):
 #   bash cluster/submit_cpu_multiseed.sh esol 0
 #   bash cluster/submit_cpu_multiseed.sh hiv 1 24:00:00 32G
 #
@@ -42,9 +42,10 @@ if [[ ! -f "$NOTEBOOK" ]]; then
   exit 1
 fi
 
-if [[ "$RWTH_ACCOUNT" == "thesXXXX" ]]; then
-  echo "WARNING: Set RWTH_ACCOUNT in cluster/rwth_config.sh"
-  echo "  sacctmgr show user \$USER format=account%30"
+if [[ -z "${RWTH_ACCOUNT:-}" ]]; then
+  echo "ERROR: Set RWTH_ACCOUNT in cluster/rwth_config.sh or export RWTH_ACCOUNT=ACCOUNT_ID"
+  echo "       List accounts: sacctmgr show user \$USER format=account%30"
+  exit 1
 fi
 
 mkdir -p cluster/logs "results/multiseed/seed_${SEED}/"{cpu,gpu,combined,splits}

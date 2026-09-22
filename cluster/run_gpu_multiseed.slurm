@@ -1,5 +1,5 @@
 #!/usr/local_rwth/bin/zsh
-#SBATCH --account=thesXXXX
+#SBATCH --account=ACCOUNT_ID
 #SBATCH --partition=c23g
 #SBATCH --job-name=bench-ms-gpu
 #SBATCH --cpus-per-task=8
@@ -9,7 +9,7 @@
 #SBATCH --gres=gpu:1
 #SBATCH --output=cluster/logs/gpu_ms_%x_%j.out
 #SBATCH --error=cluster/logs/gpu_ms_%x_%j.err
-#SBATCH --mail-user=emir.erdem@rwth-aachen.de
+#SBATCH --mail-user=name@example.com
 #SBATCH --mail-type=END,FAIL
 
 # Multi-seed GPU notebook via papermill.
@@ -51,7 +51,7 @@ SPLIT_PKL="results/multiseed/seed_${SEED}/splits/${DATASET}_scaffold_splits.pkl"
 CPU_PARTIAL="results/multiseed/seed_${SEED}/cpu/${DATASET}_partial.json"
 
 echo "============================================================"
-echo "Benchmark v4 GPU multi-seed — ${DATASET}  seed=${SEED}"
+echo "GPU multi-seed: ${DATASET}  seed=${SEED}"
 echo "Host      : $(hostname)"
 echo "Start     : $(date -Iseconds)"
 echo "Notebook  : ${NOTEBOOK}"

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Submit GPU jobs for all 7 datasets in series (each starts after the previous finishes).
 #
-# Usage (from benchmark_v4/):
+# Usage (from the repository root/):
 #   bash cluster/submit_all_gpu_sequential.sh
 #
 # Good when you only have one GPU allocation at a time.

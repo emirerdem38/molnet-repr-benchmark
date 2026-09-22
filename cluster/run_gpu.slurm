@@ -1,5 +1,5 @@
 #!/usr/local_rwth/bin/zsh
-#SBATCH --account=rwth2175
+#SBATCH --account=ACCOUNT_ID
 #SBATCH --partition=c23g
 #SBATCH --job-name=v5-gpu
 #SBATCH --cpus-per-task=8
@@ -9,10 +9,10 @@
 #SBATCH --gres=gpu:1
 #SBATCH --output=cluster/logs/%x_%j.out
 #SBATCH --error=cluster/logs/%x_%j.err
-#SBATCH --mail-user=emir.erdem@rwth-aachen.de
+#SBATCH --mail-user=name@example.com
 #SBATCH --mail-type=END,FAIL
 #
-# Benchmark v5 — GPU track (GIN / D-MPNN / SchNet / LSTM) for one dataset / seed / mode.
+# Benchmark v5: GPU track (GIN / D-MPNN / SchNet / LSTM) for one dataset / seed / mode.
 #
 # Preferred: submit via the wrapper (fills --account/--partition/--gres from rwth_config.sh):
 #   bash cluster/submit.sh --device gpu --seed 0 --mode scaffold esol
@@ -69,7 +69,7 @@ OUTPUT="${RESULTS_ROOT}/gpu/${DATASET}_executed.ipynb"
 CPU_PARTIAL="${RESULTS_ROOT}/cpu/${DATASET}_partial.json"
 
 echo "============================================================"
-echo "Benchmark v5 GPU — dataset=${DATASET} seed=${SEED} mode=${MODE}"
+echo "Benchmark v5 GPU: dataset=${DATASET} seed=${SEED} mode=${MODE}"
 echo "Host      : $(hostname)"
 echo "Start     : $(date -Iseconds)"
 echo "Notebook  : ${NOTEBOOK}"
@@ -79,7 +79,7 @@ if [[ "${BENCH_AFTER_DMPNN:-}" == "1" ]]; then
 elif [[ -n "${BENCH_SKIP_MODELS:-}" ]]; then
   echo "Skip      : ${BENCH_SKIP_MODELS}"
 else
-  echo "Skip      : (none — run all missing models)"
+  echo "Skip      : (none: run all missing models)"
 fi
 echo "============================================================"
 

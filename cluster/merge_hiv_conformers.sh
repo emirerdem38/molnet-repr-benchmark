@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Merge SLURM array chunks into data/hiv_conformers_n25.pkl
 #
-# Run from benchmark_v4/ after all array tasks finished:
+# Run from the repository root/ after all array tasks finished:
 #   bash cluster/merge_hiv_conformers.sh
 
 set -euo pipefail

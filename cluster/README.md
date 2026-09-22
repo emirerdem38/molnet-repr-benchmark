@@ -1,170 +1,158 @@
-# Benchmark v4 — Cluster GPU runs
+# Cluster helpers (optional)
 
-Run the five GPU models per dataset (GIN 2D, D-MPNN, GIN 3D, SchNet, SMILES LSTM) via **papermill** on RWTH SLURM.
+SLURM helpers for running the benchmark on an HPC cluster (examples use
+RWTH CLAIX naming). Local runs do not need this folder.
 
-## Prerequisites (upload from Mac)
+## Prerequisites
 
-From your Mac, upload/sync at least:
+Sync the repository to the cluster, including:
 
 ```
-molnet_esol_project/
-├── .venv/                          # or run setup_cluster_env.sh on cluster
-└── benchmark_v4/
-    ├── *.py, conformer_generation.py
-    ├── data/                         # CSVs + *_conformers_n25.pkl
-    ├── notebooks/gpu/*.ipynb
-    ├── results/splits/               # REQUIRED — from CPU runs
-    │   └── {dataset}_scaffold_splits.pkl  (×7)
-    └── results/cpu/                  # for combined CSV merge
-        └── {dataset}_partial.json    (×7)
+molnet-repr-benchmark/
+├── *.py, run.sh, generate_notebooks.py
+├── data/                 # MoleculeNet CSVs and conformer pickles
+├── notebooks/            # CPU/GPU notebooks
+├── results/              # optional: existing splits / partials to resume
+└── cluster/              # this folder
 ```
 
-**Critical:** GPU notebooks reuse **CPU scaffold splits**. Without `results/splits/*.pkl`, jobs will exit immediately.
+Do not copy a local `.venv` to the cluster. Recreate the environment on Linux
+(see setup below). macOS or Windows wheels will not work there.
 
-**3D models** need conformer pickles, e.g. `data/esol_conformers_n25.pkl`. HIV: `data/hiv_conformers_n25.pkl`.
+**Splits:** GPU notebooks reuse scaffold or random splits written by the CPU
+track under `results/seed_<seed>/<mode>/splits/`. Without those pickles, GPU
+jobs exit early unless they recreate the split themselves.
 
-### Generate HIV conformers on cluster
+**3D models** need conformer pickles such as `data/esol_conformers_n25.pkl`
+(and the matching file for each dataset).
 
-**Do not upload `.venv` from your Mac** — recreate it on the cluster (Linux + different Python).
+### HIV conformers on the cluster
 
 ```bash
-cd benchmark_v4
-
-# Conformers only (recommended first — faster):
+cd molnet-repr-benchmark
 bash cluster/setup_conformers_env.sh
-
-# Or full stack (GPU notebooks too):
-# bash cluster/setup_cluster_env.sh
-
 bash cluster/submit_hiv_conformers.sh
-# wait for array → bash cluster/merge_hiv_conformers.sh
-```
-
-Quick manual fix if venv is empty:
-
-```bash
-source ../.venv/bin/activate
-export PYTHONNOUSERSITE=1
-pip install -r cluster/requirements-conformers.txt
-pip install torch --index-url https://download.pytorch.org/whl/cpu
-pip install torch-geometric
-```
-
-If you see `No module named 'pytz'` or `No module named 'pandas'`, the job used `~/.local` Python or an empty venv — run setup above and resubmit.
-
-**NumPy error** (`module 'numpy' has no attribute 'long'`): the venv has numpy 1.x,
-which is too old for scipy 1.18 / scikit-learn 1.9. RDKit 2026 supports numpy 2.x,
-so upgrade rather than downgrade:
-
-```bash
-bash cluster/fix_numpy_rdkit.sh
-# or manually:
-pip install "numpy>=2.0"
-```
-
-**Empty slice / array tasks 11–19 failed:** The old script chunked 41k CSV rows, but HIV has only ~21k valid molecules after preprocessing. Tasks 0–10 cover the full set; tasks 11–19 were empty. If those chunks finished, merge without resubmitting:
-
-```bash
+# after the array finishes:
 bash cluster/merge_hiv_conformers.sh
 ```
 
-Re-upload `cluster/run_hiv_conformers_array.slurm` for future runs (now counts valid molecules automatically).
+Manual repair if the venv is incomplete:
 
-Single-job alternative (slower): `sbatch cluster/run_hiv_conformers.slurm`
+```bash
+source .venv/bin/activate   # or the path used by setup_*.sh
+export PYTHONNOUSERSITE=1
+pip install -r cluster/requirements-conformers.txt
+pip install torch -i https://download.pytorch.org/whl/cpu
+pip install torch-geometric
+```
 
+If jobs report missing `pytz` or `pandas`, they likely used a user site-packages
+install or an empty venv. Rerun the setup script and resubmit.
 
-## RWTH account (required once)
+**NumPy / RDKit mismatch** (`numpy` has no attribute `long`): upgrade NumPy
+rather than downgrade the stack:
 
-Thesis accounts look like `thes1234` (not `rwth2003`). I don't have yours in this repo — find it on the cluster:
+```bash
+bash cluster/fix_numpy_rdkit.sh
+# or: pip install "numpy>=2.0"
+```
+
+## SLURM account (set once)
+
+Set the computing account that `sbatch` should charge. On many sites:
 
 ```bash
 sacctmgr show user $USER format=account%30
 ```
 
-Then edit **`cluster/rwth_config.sh`**:
+Edit `cluster/rwth_config.sh`:
 
 ```bash
-export RWTH_ACCOUNT="thes1234"   # your actual ID
+export RWTH_ACCOUNT="ACCOUNT_ID"
+export RWTH_MAIL_USER="name@example.com"
 ```
 
-Submit scripts pass `--account` from that file (overrides `#SBATCH --account=thesXXXX` in the `.slurm` files).
+Submit wrappers read that file and pass the account to `sbatch`.
 
-## One-time setup on cluster
+## One-time environment setup
 
 ```bash
-cd ~/path/to/molnet_esol_project/benchmark_v4
+cd molnet-repr-benchmark
 bash cluster/setup_cluster_env.sh
 ```
 
-If PyTorch CUDA wheels fail, load your cluster's PyTorch module first, then re-run pip for the remaining packages.
+If CUDA PyTorch wheels fail, load the site module for PyTorch first, then finish
+with pip for the remaining packages. Optional CUDA extras:
+
+```bash
+bash cluster/install_cuda_torch.sh
+bash cluster/install_pyg_extensions.sh
+```
 
 ## Submit jobs
 
-All commands run from **`benchmark_v4/`**:
+From the repository root:
 
 ```bash
-# Single dataset
-bash cluster/submit_gpu.sh esol
-bash cluster/submit_gpu.sh hiv              # 96h, 64G RAM
+# One dataset (device, seed, split mode)
+bash cluster/submit.sh -d cpu -s 0 -m scaffold esol
+bash cluster/submit.sh -d gpu -s 0 -m scaffold hiv
 
-# All 7 datasets in parallel (needs 7 GPU slots)
-bash cluster/submit_all_gpu.sh
+# All seven datasets for that seed / mode / device
+bash cluster/submit.sh -d cpu -s 0 -m scaffold --all
+bash cluster/submit.sh -d gpu -s 0 -m scaffold --all
 
-# All 7 in sequence (one GPU at a time)
-bash cluster/submit_all_gpu_sequential.sh
-
-# Per-dataset shortcuts
-bash cluster/jobs/submit_esol.sh
-bash cluster/jobs/submit_hiv.sh
+# Preview without submitting
+bash cluster/submit.sh -d gpu -s 0 -m scaffold hiv --dry-run
 ```
 
-Or directly (set account first):
+See `cluster/SUBMIT_V5.md` for a longer walkthrough.
+
+Direct `sbatch` (after setting the account):
 
 ```bash
-sbatch --account=thes1234 --partition=c23g cluster/run_gpu.slurm tox21
+sbatch --account=ACCOUNT_ID --partition=c23g cluster/run_gpu.slurm tox21
 ```
 
-## Default resources
+## Default resources (example)
 
-SLURM headers follow RWTH format (`#!/usr/local_rwth/bin/zsh`, `--nodes=1`, mail on END/FAIL). GPU jobs use `--mem=32G` (c23g sets `mem-per-gpu` by default — do not combine with `--mem-per-cpu`).
+Headers follow a typical RWTH layout (`#!/usr/local_rwth/bin/zsh`, mail on
+END/FAIL). Adjust partitions and memory for the local site. Example GPU table:
 
-| Dataset       | Partition | Walltime | Memory (8 CPU) |
-|---------------|-----------|----------|----------------|
-| ESOL          | c23g      | 24 h     | 32G            |
-| FreeSolv      | c23g      | 24 h     | 32G            |
-| Lipophilicity | c23g      | 48 h     | 48G            |
-| BACE          | c23g      | 48 h     | 32G            |
-| BBBP          | c23g      | 48 h     | 32G            |
-| Tox21         | c23g      | 72 h     | 48G            |
-| HIV           | c23g      | 96 h     | 64G            |
+| Dataset       | Partition | Walltime | Memory |
+|---------------|-----------|----------|--------|
+| ESOL          | c23g      | 24 h     | 32G    |
+| FreeSolv      | c23g      | 24 h     | 32G    |
+| Lipophilicity | c23g      | 48 h     | 48G    |
+| BACE          | c23g      | 48 h     | 32G    |
+| BBBP          | c23g      | 48 h     | 32G    |
+| Tox21         | c23g      | 72 h     | 48G    |
+| HIV           | c23g      | 96 h     | 64G    |
 
-HIV conformers (CPU): partition `c23ms`, `--mem-per-cpu=2540M`.
-
-Override: `bash cluster/submit_gpu.sh hiv 120:00:00 64G`
-
-Edit `cluster/rwth_config.sh` for account, partition, and mail.
+Conformer jobs often use a CPU partition (example: `c23ms`). Override time and
+memory when calling the submit helpers, and edit `cluster/rwth_config.sh` for
+account, partition, and mail.
 
 ## Monitor
 
 ```bash
 squeue -u $USER
-tail -f cluster/logs/gpu_bench-gpu-esol_<JOBID>.out
+tail -f cluster/logs/*.out
 ```
 
 ## Outputs
 
 | Path | Content |
 |------|---------|
-| `results/gpu/{dataset}_partial.json` | GPU model metrics (resume-safe) |
-| `results/gpu/{dataset}_executed.ipynb` | Full executed notebook |
-| `results/combined/{dataset}_results.csv` | CPU + GPU merged (if CPU partial uploaded) |
-| `results/gpu/hpo/{dataset}/` | Optuna best params |
-| `results/gpu/histories/` | Training curves |
+| `results/seed_*/.../cpu/` or `gpu/` | Metrics, HPO, histories |
+| `results/seed_*/.../combined/` | Merged tables and plots when both tracks finished |
+| `results/seed_*/.../splits/` | Split pickles |
 
-Notebooks use `FRESH_RUN = False` — interrupted jobs resume from partial JSON.
+Notebooks use resume-friendly partial JSON when `FRESH_RUN` is false.
 
 ## Suggested order
 
-Same as CPU: **ESOL → FreeSolv → Lipophilicity → BACE → BBBP → Tox21 → HIV**
+Run datasets roughly small to large:
+**ESOL, FreeSolv, Lipophilicity, BACE, BBBP, Tox21, HIV**.
 
-For a first smoke test, submit **ESOL only** before launching HIV.
+For a first check, submit ESOL alone before launching HIV.

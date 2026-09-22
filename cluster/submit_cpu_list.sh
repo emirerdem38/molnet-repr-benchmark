@@ -11,7 +11,7 @@
 #   bash cluster/submit_cpu_list.sh --dry-run  # preview only
 #
 # Account/partition/mail come from cluster/rwth_config.sh via submit.sh, so to use
-# a different project just edit RWTH_ACCOUNT there — nothing else to change.
+# a different project just edit RWTH_ACCOUNT there: nothing else to change.
 
 set -euo pipefail
 cd "$(dirname "$0")/.."

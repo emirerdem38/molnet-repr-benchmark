@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Submit HIV conformer generation (parallel array, recommended).
 #
-# Usage from benchmark_v4/:
+# Usage from the repository root:
 #   bash cluster/submit_hiv_conformers.sh
 #
 # After all array jobs finish:
@@ -21,9 +21,9 @@ if [[ ! -f data/hiv.csv ]]; then
   exit 1
 fi
 
-if [[ "$RWTH_ACCOUNT" == "thesXXXX" ]]; then
-  echo "WARNING: Set RWTH_ACCOUNT in cluster/rwth_config.sh before submitting"
-  echo ""
+if [[ -z "${RWTH_ACCOUNT:-}" ]]; then
+  echo "ERROR: Set RWTH_ACCOUNT in cluster/rwth_config.sh or export RWTH_ACCOUNT=ACCOUNT_ID"
+  exit 1
 fi
 
 JOB_ID=$(sbatch \

@@ -1,5 +1,5 @@
 #!/usr/local_rwth/bin/zsh
-#SBATCH --account=thesXXXX
+#SBATCH --account=ACCOUNT_ID
 #SBATCH --partition=c23ms
 #SBATCH --job-name=bench-ms-cpu
 #SBATCH --cpus-per-task=8
@@ -8,7 +8,7 @@
 #SBATCH --ntasks=1
 #SBATCH --output=cluster/logs/cpu_ms_%x_%j.out
 #SBATCH --error=cluster/logs/cpu_ms_%x_%j.err
-#SBATCH --mail-user=emir.erdem@rwth-aachen.de
+#SBATCH --mail-user=name@example.com
 #SBATCH --mail-type=END,FAIL
 
 # Multi-seed CPU notebook (tabular + scaffold split).
@@ -46,7 +46,7 @@ NOTEBOOK="notebooks/multiseed/seed_${SEED}/cpu/benchmark_cpu_${DATASET}.ipynb"
 OUTPUT="results/multiseed/seed_${SEED}/cpu/${DATASET}_executed.ipynb"
 
 echo "============================================================"
-echo "Benchmark v4 CPU multi-seed — ${DATASET}  seed=${SEED}"
+echo "CPU multi-seed: ${DATASET}  seed=${SEED}"
 echo "Host      : $(hostname)"
 echo "Start     : $(date -Iseconds)"
 echo "Notebook  : ${NOTEBOOK}"

@@ -9,7 +9,7 @@
 #   bash cluster/submit_remaining_cpu.sh --dry-run  # preview only, submit nothing
 #
 # Account/partition/mail come from cluster/rwth_config.sh via submit.sh, so to use
-# a different project just edit RWTH_ACCOUNT there — no other change needed.
+# a different project just edit RWTH_ACCOUNT there: no other change needed.
 
 set -euo pipefail
 cd "$(dirname "$0")/.."
@@ -21,7 +21,7 @@ SEEDS=(0 1 2 3 4)
 MODES=(scaffold random)
 DATASETS=(esol freesolv lipophilicity bace bbbp tox21 hiv)
 
-# Jobs to skip — format: "mode/dataset/seed"
+# Jobs to skip: format: "mode/dataset/seed"
 EXCLUDE=(
   "random/tox21/0"      # currently running
   "random/tox21/1"      # currently running
